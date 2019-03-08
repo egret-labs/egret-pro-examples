@@ -1952,7 +1952,7 @@ var egret3d;
          */
         GLTFAsset.createConfig = function () {
             var config = {
-                version: "4",
+                version: "5",
                 asset: {
                     version: "2.0"
                 },
@@ -3335,8 +3335,7 @@ var paper;
             paper.editor.property("LIST" /* LIST */, { listItems: paper.editor.getItemsFromEnum(paper.DefaultTags) }) // TODO
         ], Entity.prototype, "tag", void 0);
         __decorate([
-            paper.serializedField,
-            paper.editor.property("LIST" /* LIST */, { listItems: paper.editor.getItemsFromEnum(paper.HideFlags) }) // TODO
+            paper.serializedField
         ], Entity.prototype, "hideFlags", void 0);
         __decorate([
             paper.serializedField
@@ -7100,15 +7099,11 @@ var paper;
          * @internal
          */
         BaseTransform.prototype._destroy = function () {
-            for (var _i = 0, _a = this._children; _i < _a.length; _i++) {
-                var child = _a[_i];
-                child.entity.destroy();
-            }
+            this.destroyChildren();
             if (this._parent) {
                 this._parent._removeChild(this);
             }
             _super.prototype._destroy.call(this);
-            this._children.length > 0 && (this._children.length = 0);
         };
         /**
          * @internal
@@ -7200,6 +7195,7 @@ var paper;
             while (i--) {
                 children[i].entity.destroy();
             }
+            children.length > 0 && (children.length = 0);
         };
         /**
          *
@@ -11009,7 +11005,7 @@ var paper;
         Clock.prototype.initialize = function () {
             _super.prototype.initialize.call(this);
             paper.Time = paper.clock = this;
-            this._beginTime = performance.now() * 0.001;
+            // this._beginTime = performance.now() * 0.001;//TODO 解决微信和web上时间不统一
         };
         /**
          * @internal
@@ -11018,6 +11014,9 @@ var paper;
         Clock.prototype.update = function (time) {
             var isReseted = false;
             var now = (time || performance.now()) * 0.001;
+            if (!this._beginTime) {
+                this._beginTime = now;
+            }
             if (this._needReset) {
                 this._unscaledTime = now - this._beginTime;
                 this._unscaledDeltaTime = 0;
@@ -12044,7 +12043,7 @@ var paper;
     /**
      * @private
      */
-    paper.DATA_VERSION = 5;
+    paper.DATA_VERSION = "5";
     /**
      * @private
      */
@@ -12155,7 +12154,8 @@ var paper;
             }
             return true;
         }
-        if (egret.is(source, "paper.ISerializable")) {
+        // if (source[KEY_SERIALIZE] !== null) {
+        if (KEY_SERIALIZE in source) {
             return equal(source.serialize(), target.serialize());
         }
         if (source instanceof paper.BaseObject) {
@@ -12323,7 +12323,8 @@ var paper;
                     }
                     return target;
                 }
-                if (egret.is(source, "paper.ISerializable")) {
+                // if (source[KEY_SERIALIZE] !== null) {
+                if (KEY_SERIALIZE in source) {
                     return source.serialize();
                 }
                 if (source instanceof paper.BaseObject) {
@@ -27726,6 +27727,10 @@ var paper;
             if (!this._isRunning) {
                 return;
             }
+            if (!timestamp) {
+                requestAnimationFrame(this._loop);
+                return;
+            }
             timestamp = timestamp || performance.now();
             var result = paper.clock.update(timestamp) || { tickCount: 1, frameCount: 1 };
             this._update(result);
@@ -31471,6 +31476,7 @@ var egret3d;
                         }
                         egret2DRenderer._draw();
                         renderState.clearState();
+                        this._cacheProgram = null; //防止2d的program污染3d的
                     }
                 }
             };
@@ -31530,7 +31536,7 @@ var egret3d;
                     renderState_2.caches.egret2DOrderCount = 0;
                     renderState_2.caches.cullingMask = 0 /* Nothing */;
                     renderState_2.caches.clockBuffer[0] = clock.time; // TODO more clock info.
-                    this._cacheProgram = null;
+                    // this._cacheProgram = null;
                     // Render lights shadows. TODO 
                     // if (camera.cullingMask !== renderState.caches.cullingMask) {
                     var lights = this._cameraAndLightCollecter.lights;

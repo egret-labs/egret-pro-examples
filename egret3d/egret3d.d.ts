@@ -316,11 +316,11 @@ declare namespace paper {
         /**
          *
          */
-        version?: number;
+        version?: string;
         /**
          *
          */
-        compatibleVersion?: number;
+        compatibleVersion?: string;
         /**
          * 所有资源。
          */
@@ -5384,7 +5384,7 @@ declare namespace paper {
          * @deprecated
          * @see paper.Scene#find()
          */
-        static find(name: string, scene?: Scene | null): IEntity | null;
+        static find(name: string, scene?: Scene | null): GameObject | null;
         /**
          * @deprecated
          */
@@ -6254,11 +6254,11 @@ declare namespace paper {
     /**
      * @private
      */
-    const DATA_VERSION: number;
+    const DATA_VERSION: string;
     /**
      * @private
      */
-    const DATA_VERSIONS: number[];
+    const DATA_VERSIONS: string[];
     /**
      * @private
      */
