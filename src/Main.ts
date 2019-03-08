@@ -1,7 +1,9 @@
-import RotateBehaviour from "./behaviours/RotateBehaviour";
+import Rotater from "./behaviours/Rotater";
+import RotateLooker from "./behaviours/RotateLooker";
 
-import InputTest from "./behaviours/InputTest";
-import EUITest from "./behaviours/EUITest";
+import InputTest from "./examples/InputTest";
+import EUITest from "./examples/EUITest";
+import CubeMapStarter from "./examples/materials/CubeMapStarter";
 
 async function main() {
     await RES.loadConfig("resource/default.res.json", "resource/");
@@ -9,7 +11,10 @@ async function main() {
     paper.Application.sceneManager.loadScene('Asset/scenes/newScene.scene.json');
 
     // 强制引用，该问题将在 Egret Pro 1.0.0 修复。
-    RotateBehaviour;
+    Rotater;
+    RotateLooker;
+
     InputTest;
     EUITest;
+    CubeMapStarter;
 }
