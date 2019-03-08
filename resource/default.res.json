@@ -252,6 +252,21 @@
 			"name": "Assets/materials/logo.mat.json"
 		},
 		{
+			"url": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Threejs/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Threejs/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json"
+		},
+		{
+			"url": "Assets/models/Threejs/WaltHead.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/models/Threejs/WaltHead.prefab.json"
+		},
+		{
 			"url": "Assets/prefabs/grid_room.prefab.json",
 			"type": "Prefab",
 			"name": "Assets/prefabs/grid_room.prefab.json"
@@ -265,6 +280,11 @@
 			"url": "Assets/scenes/input_test.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/input_test.scene.json"
+		},
+		{
+			"url": "Assets/scenes/materials_examples/CubeMap.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/materials_examples/CubeMap.scene.json"
 		},
 		{
 			"url": "Assets/scenes/newScene.scene.json",
@@ -300,6 +320,56 @@
 			"url": "Assets/textures/logo.png",
 			"type": "Texture",
 			"name": "Assets/textures/logo.png"
+		},
+		{
+			"url": "Threejs/materials/SwedishRoyalCastle.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/SwedishRoyalCastle.mat.json"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/nx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/nx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/ny.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/ny.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/nz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/nz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/px.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/px.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/py.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/py.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/pz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/pz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/readme.txt",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/readme.txt"
+		},
+		{
+			"url": "Threejs/textures/cube/SwedishRoyalCastle/SwedishRoyalCastle.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/SwedishRoyalCastle/SwedishRoyalCastle.image.json"
+		},
+		{
+			"url": "Threejs/textures/UV_Grid_Sm.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/UV_Grid_Sm.jpg"
 		}
 	]
 }
