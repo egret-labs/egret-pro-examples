@@ -1,0 +1,70 @@
+{
+	"groups": [],
+	"resources": [
+		{
+			"url": "Assets/materials/grid_a.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/grid_a.mat.json"
+		},
+		{
+			"url": "Assets/materials/grid_b.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/grid_b.mat.json"
+		},
+		{
+			"url": "Assets/materials/logo.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/logo.mat.json"
+		},
+		{
+			"url": "Assets/prefabs/grid_room.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/grid_room.prefab.json"
+		},
+		{
+			"url": "Assets/scenes/eui_test.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/eui_test.scene.json"
+		},
+		{
+			"url": "Assets/scenes/input_test.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/input_test.scene.json"
+		},
+		{
+			"url": "Assets/scenes/newScene.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/newScene.scene.json"
+		},
+		{
+			"url": "Assets/textures/grid_a.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/grid_a.image.json"
+		},
+		{
+			"url": "Assets/textures/grid_a.png",
+			"type": "Texture",
+			"name": "Assets/textures/grid_a.png"
+		},
+		{
+			"url": "Assets/textures/grid_b.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/grid_b.image.json"
+		},
+		{
+			"url": "Assets/textures/grid_b.png",
+			"type": "Texture",
+			"name": "Assets/textures/grid_b.png"
+		},
+		{
+			"url": "Assets/textures/logo.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/logo.image.json"
+		},
+		{
+			"url": "Assets/textures/logo.png",
+			"type": "Texture",
+			"name": "Assets/textures/logo.png"
+		}
+	]
+}
