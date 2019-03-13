@@ -237,6 +237,26 @@
 			"name": "default_thm_json"
 		},
 		{
+			"url": "Assets/animation/xuanzhuan_1_xuanzhuan_1.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animation/xuanzhuan_1_xuanzhuan_1.ani.bin"
+		},
+		{
+			"url": "Assets/animation/xuanzhuan_2_xuanzhuan_2.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animation/xuanzhuan_2_xuanzhuan_2.ani.bin"
+		},
+		{
+			"url": "Assets/materials/daoguang01_5x10.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/daoguang01_5x10.mat.json"
+		},
+		{
+			"url": "Assets/materials/effect_huojiantong_hm_001.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/effect_huojiantong_hm_001.mat.json"
+		},
+		{
 			"url": "Assets/materials/grid_a.mat.json",
 			"type": "Material",
 			"name": "Assets/materials/grid_a.mat.json"
@@ -247,9 +267,24 @@
 			"name": "Assets/materials/grid_b.mat.json"
 		},
 		{
+			"url": "Assets/materials/light0066.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/light0066.mat.json"
+		},
+		{
+			"url": "Assets/materials/light0067.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/light0067.mat.json"
+		},
+		{
 			"url": "Assets/materials/logo.mat.json",
 			"type": "Material",
 			"name": "Assets/materials/logo.mat.json"
+		},
+		{
+			"url": "Assets/materials/xiangshangguangshu02.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/xiangshangguangshu02.mat.json"
 		},
 		{
 			"url": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin",
@@ -272,6 +307,11 @@
 			"name": "Assets/prefabs/grid_room.prefab.json"
 		},
 		{
+			"url": "Assets/prefabs/texiao_anhei13x13.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/texiao_anhei13x13.prefab.json"
+		},
+		{
 			"url": "Assets/scenes/eui_test.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/eui_test.scene.json"
@@ -290,6 +330,21 @@
 			"url": "Assets/scenes/newScene.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/newScene.scene.json"
+		},
+		{
+			"url": "Assets/scenes/particle_test.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/particle_test.scene.json"
+		},
+		{
+			"url": "Assets/textures/effect_huojiantong_hm_001.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/effect_huojiantong_hm_001.image.json"
+		},
+		{
+			"url": "Assets/textures/effect_huojiantong_hm_001.png",
+			"type": "Texture",
+			"name": "Assets/textures/effect_huojiantong_hm_001.png"
 		},
 		{
 			"url": "Assets/textures/grid_a.image.json",
@@ -312,6 +367,41 @@
 			"name": "Assets/textures/grid_b.png"
 		},
 		{
+			"url": "Assets/textures/gui_3.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/gui_3.image.json"
+		},
+		{
+			"url": "Assets/textures/gui_3.mat.json",
+			"type": "Material",
+			"name": "Assets/textures/gui_3.mat.json"
+		},
+		{
+			"url": "Assets/textures/gui_3.png",
+			"type": "Texture",
+			"name": "Assets/textures/gui_3.png"
+		},
+		{
+			"url": "Assets/textures/light_009_0777.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/light_009_0777.image.json"
+		},
+		{
+			"url": "Assets/textures/light_009_0777.png",
+			"type": "Texture",
+			"name": "Assets/textures/light_009_0777.png"
+		},
+		{
+			"url": "Assets/textures/light0066.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/light0066.image.json"
+		},
+		{
+			"url": "Assets/textures/light0066.png",
+			"type": "Texture",
+			"name": "Assets/textures/light0066.png"
+		},
+		{
 			"url": "Assets/textures/logo.image.json",
 			"type": "TextureDesc",
 			"name": "Assets/textures/logo.image.json"
@@ -320,6 +410,16 @@
 			"url": "Assets/textures/logo.png",
 			"type": "Texture",
 			"name": "Assets/textures/logo.png"
+		},
+		{
+			"url": "Assets/textures/xiangshangguangshu01.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/xiangshangguangshu01.image.json"
+		},
+		{
+			"url": "Assets/textures/xiangshangguangshu01.png",
+			"type": "Texture",
+			"name": "Assets/textures/xiangshangguangshu01.png"
 		},
 		{
 			"url": "Threejs/materials/SwedishRoyalCastle.mat.json",

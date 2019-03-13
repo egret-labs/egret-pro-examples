@@ -1,10 +1,12 @@
 import Rotater from "./behaviours/Rotater";
 import RotateLooker from "./behaviours/RotateLooker";
 import RotateBehaviour from "./behaviours/RotateBehaviour";
+import RotateAround from "./behaviours/RotateAround";
 
 import InputTest from "./examples/InputTest";
 import EUITest from "./examples/EUITest";
 import CubeMapStarter from "./examples/materials/CubeMapStarter";
+
 
 async function main() {
     await RES.loadConfig("resource/default.res.json", "resource/");
@@ -15,6 +17,7 @@ async function main() {
     Rotater;
     RotateLooker;
     RotateBehaviour;
+    RotateAround;
 
     InputTest;
     EUITest;
