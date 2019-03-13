@@ -1,5 +1,6 @@
 import Rotater from "./behaviours/Rotater";
 import RotateLooker from "./behaviours/RotateLooker";
+import RotateBehaviour from "./behaviours/RotateBehaviour";
 
 import InputTest from "./examples/InputTest";
 import EUITest from "./examples/EUITest";
@@ -13,6 +14,7 @@ async function main() {
     // 强制引用，该问题将在 Egret Pro 1.0.0 修复。
     Rotater;
     RotateLooker;
+    RotateBehaviour;
 
     InputTest;
     EUITest;
