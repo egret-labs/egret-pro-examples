@@ -282,9 +282,54 @@
 			"name": "Assets/materials/logo.mat.json"
 		},
 		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_details_BaseColor_NONLOGO.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_details_BaseColor_NONLOGO.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_lights_basecolor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_lights_basecolor.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/Dical_d.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/Dical_d.mat.json"
+		},
+		{
+			"url": "Assets/materials/moto/lowpoly_bag_ve_motorcycle_bag_BaseColor.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/moto/lowpoly_bag_ve_motorcycle_bag_BaseColor.mat.json"
+		},
+		{
 			"url": "Assets/materials/xiangshangguangshu02.mat.json",
 			"type": "Material",
 			"name": "Assets/materials/xiangshangguangshu02.mat.json"
+		},
+		{
+			"url": "Assets/models/Motorbike_03.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Motorbike_03.mesh.bin"
 		},
 		{
 			"url": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin",
@@ -305,6 +350,11 @@
 			"url": "Assets/prefabs/grid_room.prefab.json",
 			"type": "Prefab",
 			"name": "Assets/prefabs/grid_room.prefab.json"
+		},
+		{
+			"url": "Assets/prefabs/Motorcycle01.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/Motorcycle01.prefab.json"
 		},
 		{
 			"url": "Assets/prefabs/texiao_anhei13x13.prefab.json",
@@ -335,6 +385,11 @@
 			"url": "Assets/scenes/particle_test.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/particle_test.scene.json"
+		},
+		{
+			"url": "Assets/scenes/prefab_test.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/prefab_test.scene.json"
 		},
 		{
 			"url": "Assets/textures/effect_huojiantong_hm_001.image.json",
@@ -410,6 +465,146 @@
 			"url": "Assets/textures/logo.png",
 			"type": "Texture",
 			"name": "Assets/textures/logo.png"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_details_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_engine_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_frame_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_sidecar_frame_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_tire_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_BaseColor.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_Normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_Normal.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_Normal.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/bike_lowpoly_ve_motorcycle_wheel_Normal.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/Dical_D.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/Dical_D.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/Dical_D.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/Dical_D.jpg"
+		},
+		{
+			"url": "Assets/textures/moto/Dical_N.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/textures/moto/Dical_N.image.json"
+		},
+		{
+			"url": "Assets/textures/moto/Dical_N.jpg",
+			"type": "Texture",
+			"name": "Assets/textures/moto/Dical_N.jpg"
 		},
 		{
 			"url": "Assets/textures/xiangshangguangshu01.image.json",
