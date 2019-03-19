@@ -1,9 +1,6 @@
 {
-    "version": 5,
-    "assets": [
-        "Threejs/materials/SwedishRoyalCastle.mat.json",
-        "Assets/models/Threejs/WaltHead.prefab.json"
-    ],
+    "version": "5",
+    "assets": [],
     "objects": [
         {
             "uuid": 4384,
@@ -12,31 +9,7 @@
             "extras": {},
             "entities": [
                 {
-                    "uuid": "c9ade836-a7cb-41de-bbdb-73e79592f079"
-                },
-                {
-                    "uuid": "4cca924b-da31-4f48-adbc-a438ae83120f"
-                },
-                {
-                    "uuid": "f363d487-7ea8-4abe-a507-2cb7788f254c"
-                },
-                {
-                    "uuid": "17e76a84-18dc-4026-8072-d6fc3f97f0f8"
-                },
-                {
-                    "uuid": "c2295adf-526a-4770-b3c8-631f56cb71a0"
-                },
-                {
-                    "uuid": "5b3476c8-79bb-482c-96c8-d2b22ff685f5"
-                },
-                {
-                    "uuid": "5fd68eef-4eca-465c-bd44-10f5715e25e5"
-                },
-                {
-                    "uuid": "8690b849-2f8a-426c-96d9-1ab94c089599"
-                },
-                {
-                    "uuid": "245e870b-b7a5-4101-82ae-178cd24d4f5a"
+                    "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4"
                 }
             ],
             "lightmapIntensity": 1,
@@ -59,7 +32,7 @@
             "lightmaps": []
         },
         {
-            "uuid": "c9ade836-a7cb-41de-bbdb-73e79592f079",
+            "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4",
             "class": "paper.GameObject",
             "name": "Main Camera",
             "tag": "MainCamera",
@@ -67,352 +40,34 @@
             "_enabled": true,
             "components": [
                 {
-                    "uuid": "577357f8-a788-4c0a-9c03-a08c95ecb4d1"
+                    "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066"
                 },
                 {
-                    "uuid": "448d731b-7ba5-4679-8bed-6fc42fb551e0"
-                },
-                {
-                    "uuid": "f4ad25ad-009a-43bd-917e-794afa6e70f8"
-                },
-                {
-                    "uuid": "1b868f3f-c468-44df-b4d6-9f45d58cfa3b"
-                }
-            ]
-        },
-        {
-            "uuid": "4cca924b-da31-4f48-adbc-a438ae83120f",
-            "class": "paper.GameObject",
-            "name": "Right",
-            "extras": {
-                "linkedID": "1",
-                "prefab": {
-                    "asset": 1
-                }
-            },
-            "components": [
-                {
-                    "uuid": "68624b60-2ba5-4888-9901-2d0fe81c376a"
-                }
-            ]
-        },
-        {
-            "uuid": "f363d487-7ea8-4abe-a507-2cb7788f254c",
-            "class": "paper.GameObject",
-            "extras": {
-                "linkedID": "3",
-                "rootID": "4cca924b-da31-4f48-adbc-a438ae83120f"
-            },
-            "components": [
-                {
-                    "uuid": "08f0c021-110a-4380-b61c-01fa247f1638"
-                },
-                {
-                    "uuid": "959417ff-b1ce-41d7-9c00-621c8d863e0a"
-                },
-                {
-                    "uuid": "a083d6ec-50f5-497e-a173-90fb67a0cb37"
-                }
-            ]
-        },
-        {
-            "uuid": "17e76a84-18dc-4026-8072-d6fc3f97f0f8",
-            "class": "paper.GameObject",
-            "name": "Left",
-            "extras": {
-                "linkedID": "1",
-                "prefab": {
-                    "asset": 1
-                }
-            },
-            "components": [
-                {
-                    "uuid": "a43d2654-faef-461b-8b55-85f9ac986696"
-                }
-            ]
-        },
-        {
-            "uuid": "c2295adf-526a-4770-b3c8-631f56cb71a0",
-            "class": "paper.GameObject",
-            "extras": {
-                "linkedID": "3",
-                "rootID": "17e76a84-18dc-4026-8072-d6fc3f97f0f8"
-            },
-            "components": [
-                {
-                    "uuid": "5ab93150-0e2f-42bb-875f-f9297f6a11a3"
-                },
-                {
-                    "uuid": "286eb7bf-9ca5-463c-83ed-2972dc406d3f"
-                },
-                {
-                    "uuid": "c99c5fc4-dcd4-44e4-b76c-5c7b782d714a"
-                }
-            ]
-        },
-        {
-            "uuid": "5b3476c8-79bb-482c-96c8-d2b22ff685f5",
-            "class": "paper.GameObject",
-            "name": "Middle",
-            "extras": {
-                "linkedID": "1",
-                "prefab": {
-                    "asset": 1
-                }
-            },
-            "components": [
-                {
-                    "uuid": "16db65dc-b850-4564-a718-39f2bb89b3bb"
-                }
-            ]
-        },
-        {
-            "uuid": "5fd68eef-4eca-465c-bd44-10f5715e25e5",
-            "class": "paper.GameObject",
-            "extras": {
-                "linkedID": "3",
-                "rootID": "5b3476c8-79bb-482c-96c8-d2b22ff685f5"
-            },
-            "components": [
-                {
-                    "uuid": "b85e9e7f-227f-4ae1-8474-a81a864dec3c"
-                },
-                {
-                    "uuid": "8bfb3381-0d66-4bf4-972b-916557fa87c8"
-                },
-                {
-                    "uuid": "fe400740-ee5c-486a-a9cd-5e195d352d66"
-                }
-            ]
-        },
-        {
-            "uuid": "8690b849-2f8a-426c-96d9-1ab94c089599",
-            "class": "paper.GameObject",
-            "name": "Point Light",
-            "extras": {},
-            "_enabled": true,
-            "components": [
-                {
-                    "uuid": "e9d2bd74-c6a4-4aa6-917c-a7287ec40ea6"
-                },
-                {
-                    "uuid": "ef5c9bc3-7a44-43a9-be07-d110edd75523"
-                }
-            ]
-        },
-        {
-            "uuid": "245e870b-b7a5-4101-82ae-178cd24d4f5a",
-            "class": "paper.GameObject",
-            "name": "Starter",
-            "extras": {},
-            "_enabled": true,
-            "components": [
-                {
-                    "uuid": "9f53f37f-9bed-47a3-8d65-b3b14d39e25e"
-                },
-                {
-                    "uuid": "c06f4990-6194-4aea-b7bf-48f831cceed3"
+                    "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21"
                 }
             ]
         }
     ],
     "components": [
         {
-            "uuid": "577357f8-a788-4c0a-9c03-a08c95ecb4d1",
+            "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066",
             "class": "egret3d.Transform",
             "_localPosition": [
                 0,
+                20,
+                -10
+            ],
+            "_localRotation": [
+                0.3826834323650898,
                 0,
-                -2000
+                0,
+                0.9238795325112867
             ],
             "extras": {}
         },
         {
-            "uuid": "448d731b-7ba5-4679-8bed-6fc42fb551e0",
+            "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21",
             "class": "egret3d.Camera",
-            "cullingMask": "1",
-            "backgroundColor": [
-                0,
-                0,
-                0,
-                0.00392156862745098
-            ],
-            "near": 1,
-            "far": 3000,
-            "fov": 0.8726646259971648,
-            "extras": {}
-        },
-        {
-            "uuid": "f4ad25ad-009a-43bd-917e-794afa6e70f8",
-            "class": "egret3d.SkyBox",
-            "materials": [
-                {
-                    "asset": 0
-                }
-            ],
-            "extras": {}
-        },
-        {
-            "uuid": "1b868f3f-c468-44df-b4d6-9f45d58cfa3b",
-            "class": "RotateLooker",
-            "extras": {}
-        },
-        {
-            "uuid": "68624b60-2ba5-4888-9901-2d0fe81c376a",
-            "class": "egret3d.Transform",
-            "_localPosition": [
-                900,
-                -500,
-                0
-            ],
-            "_localScale": [
-                15,
-                15,
-                15
-            ],
-            "children": [
-                {
-                    "uuid": "959417ff-b1ce-41d7-9c00-621c8d863e0a"
-                }
-            ],
-            "extras": {
-                "linkedID": "2"
-            }
-        },
-        {
-            "uuid": "08f0c021-110a-4380-b61c-01fa247f1638",
-            "class": "egret3d.MeshRenderer",
-            "extras": {
-                "linkedID": "6"
-            }
-        },
-        {
-            "uuid": "959417ff-b1ce-41d7-9c00-621c8d863e0a",
-            "class": "egret3d.Transform",
-            "extras": {
-                "linkedID": "4"
-            }
-        },
-        {
-            "uuid": "a083d6ec-50f5-497e-a173-90fb67a0cb37",
-            "class": "egret3d.MeshFilter",
-            "extras": {
-                "linkedID": "5"
-            }
-        },
-        {
-            "uuid": "a43d2654-faef-461b-8b55-85f9ac986696",
-            "class": "egret3d.Transform",
-            "_localPosition": [
-                -900,
-                -500,
-                0
-            ],
-            "_localScale": [
-                15,
-                15,
-                15
-            ],
-            "children": [
-                {
-                    "uuid": "286eb7bf-9ca5-463c-83ed-2972dc406d3f"
-                }
-            ],
-            "extras": {
-                "linkedID": "2"
-            }
-        },
-        {
-            "uuid": "5ab93150-0e2f-42bb-875f-f9297f6a11a3",
-            "class": "egret3d.MeshRenderer",
-            "extras": {
-                "linkedID": "6"
-            }
-        },
-        {
-            "uuid": "286eb7bf-9ca5-463c-83ed-2972dc406d3f",
-            "class": "egret3d.Transform",
-            "extras": {
-                "linkedID": "4"
-            }
-        },
-        {
-            "uuid": "c99c5fc4-dcd4-44e4-b76c-5c7b782d714a",
-            "class": "egret3d.MeshFilter",
-            "extras": {
-                "linkedID": "5"
-            }
-        },
-        {
-            "uuid": "16db65dc-b850-4564-a718-39f2bb89b3bb",
-            "class": "egret3d.Transform",
-            "_localPosition": [
-                0,
-                -500,
-                0
-            ],
-            "_localScale": [
-                15,
-                15,
-                15
-            ],
-            "children": [
-                {
-                    "uuid": "8bfb3381-0d66-4bf4-972b-916557fa87c8"
-                }
-            ],
-            "extras": {
-                "linkedID": "2"
-            }
-        },
-        {
-            "uuid": "b85e9e7f-227f-4ae1-8474-a81a864dec3c",
-            "class": "egret3d.MeshRenderer",
-            "extras": {
-                "linkedID": "6"
-            }
-        },
-        {
-            "uuid": "8bfb3381-0d66-4bf4-972b-916557fa87c8",
-            "class": "egret3d.Transform",
-            "extras": {
-                "linkedID": "4"
-            }
-        },
-        {
-            "uuid": "fe400740-ee5c-486a-a9cd-5e195d352d66",
-            "class": "egret3d.MeshFilter",
-            "extras": {
-                "linkedID": "5"
-            }
-        },
-        {
-            "uuid": "e9d2bd74-c6a4-4aa6-917c-a7287ec40ea6",
-            "class": "egret3d.Transform",
-            "children": [],
-            "extras": {}
-        },
-        {
-            "uuid": "ef5c9bc3-7a44-43a9-be07-d110edd75523",
-            "class": "egret3d.PointLight",
-            "intensity": 2,
-            "color": [
-                1,
-                1,
-                1,
-                0.00392156862745098
-            ],
-            "extras": {}
-        },
-        {
-            "uuid": "9f53f37f-9bed-47a3-8d65-b3b14d39e25e",
-            "class": "egret3d.Transform",
-            "children": [],
-            "extras": {}
-        },
-        {
-            "uuid": "c06f4990-6194-4aea-b7bf-48f831cceed3",
-            "class": "CubeMapStarter",
             "extras": {}
         }
     ]

@@ -1,11 +1,16 @@
+
 export default class RotateLooker extends paper.Behaviour {
 
     @paper.editor.property(paper.editor.EditType.FLOAT, { minimum: -10.0, maximum: 10.0 })
+    @paper.serializedField
     public rotateSpeed: number = 0.25;
 
     @paper.editor.property(paper.editor.EditType.VECTOR3)
+    @paper.serializedField
     public readonly lookAtPoint: egret3d.Vector3 = egret3d.Vector3.create();
 
+    @paper.editor.property(paper.editor.EditType.GAMEOBJECT)
+    @paper.serializedField
     public target: paper.GameObject | null = null;
 
     private _radius: number = 0.0;

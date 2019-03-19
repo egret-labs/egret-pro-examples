@@ -382,6 +382,21 @@
 			"name": "Assets/scenes/newScene.scene.json"
 		},
 		{
+			"url": "Assets/scenes/oimo.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/basic.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/basic.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/joints.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/joints.scene.json"
+		},
+		{
 			"url": "Assets/scenes/particle_test.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/particle_test.scene.json"
