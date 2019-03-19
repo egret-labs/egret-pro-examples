@@ -372,9 +372,9 @@
 			"name": "Assets/scenes/input_test.scene.json"
 		},
 		{
-			"url": "Assets/scenes/materials_examples/CubeMap.scene.json",
+			"url": "Assets/scenes/materials/CubeMap.scene.json",
 			"type": "Scene",
-			"name": "Assets/scenes/materials_examples/CubeMap.scene.json"
+			"name": "Assets/scenes/materials/CubeMap.scene.json"
 		},
 		{
 			"url": "Assets/scenes/newScene.scene.json",
@@ -382,14 +382,14 @@
 			"name": "Assets/scenes/newScene.scene.json"
 		},
 		{
-			"url": "Assets/scenes/oimo.scene.json",
-			"type": "Scene",
-			"name": "Assets/scenes/oimo.scene.json"
-		},
-		{
 			"url": "Assets/scenes/oimo/basic.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/oimo/basic.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/colliders.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/colliders.scene.json"
 		},
 		{
 			"url": "Assets/scenes/oimo/joints.scene.json",

@@ -1,7 +1,7 @@
 {
     "version": "5",
     "assets": [
-        "builtin/meshphong.mat.json",
+        "Assets/materials/logo.mat.json",
         "builtin/cube.mesh.bin",
         "Assets/prefabs/grid_room.prefab.json"
     ],

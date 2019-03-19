@@ -7,7 +7,8 @@ import RotateAround from "./behaviours/RotateAround";
 import InputTest from "./examples/InputTest";
 import EUITest from "./examples/EUITest";
 import CubeMapStarter from "./examples/materials/CubeMapStarter";
-
+import OimoBasicStarter from "./examples/oimo/OimoBasicStarter";
+import OimoColliderStarter from "./examples/oimo/OimoColliderStarter";
 
 async function main() {
     await RES.loadConfig("resource/default.res.json", "resource/");
@@ -24,4 +25,6 @@ async function main() {
     InputTest;
     EUITest;
     CubeMapStarter;
+    OimoBasicStarter;
+    OimoColliderStarter;
 }

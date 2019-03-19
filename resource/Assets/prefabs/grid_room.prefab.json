@@ -48,7 +48,7 @@
         {
             "uuid": "6f7ba801-407b-44dc-887c-6d0b2b4b42f1",
             "class": "paper.GameObject",
-            "name": "cube",
+            "name": "Room",
             "_enabled": true,
             "components": [
                 {

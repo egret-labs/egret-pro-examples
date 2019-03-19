@@ -388,11 +388,6 @@
         {
             "uuid": "fa444eb7-1b07-4a5b-abe1-f90a31bca1fe",
             "class": "egret3d.Transform",
-            "_localPosition": [
-                0,
-                -10,
-                0
-            ],
             "children": [
                 {
                     "uuid": "1679f045-f19f-49ef-9a7b-be7ef4549f17"
@@ -425,11 +420,6 @@
         {
             "uuid": "c46bce11-cd7e-4358-b1fa-c84143088556",
             "class": "egret3d.Transform",
-            "_localPosition": [
-                0,
-                20,
-                5
-            ],
             "extras": {
                 "linkedID": "e900b547-f1c3-42c8-b274-40638827efb0"
             }
@@ -451,6 +441,11 @@
         {
             "uuid": "62a34c18-97a0-4eea-8319-81a0c9d6c2ea",
             "class": "egret3d.Transform",
+            "_localPosition": [
+                0,
+                10,
+                0
+            ],
             "extras": {
                 "linkedID": "4816c7b2-4fe2-4bdb-abdf-9738effbe317"
             }
