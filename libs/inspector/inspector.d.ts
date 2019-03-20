@@ -180,9 +180,8 @@ declare namespace paper.editor {
         private _gizmosForwardContainerEntity;
         private _touchContainerEntity;
         private _transformControllerEntity;
-        private readonly _frustum;
-        private readonly _projectionMatrix;
-        private _updateSelectFrustum(camera, viewport);
+        private readonly _selectBox;
+        private _updateSelectBox(camera, viewport);
         lookAtSelected(): void;
         protected getMatchers(): IAnyOfMatcher<GameObject>[];
         onEnable(): void;
@@ -420,14 +419,6 @@ declare namespace paper.editor {
     /**
      *
      */
-    type QuaryValues = {
-        FPS?: 0 | 1;
-        GUI?: 0 | 1;
-        DEBUG?: 0 | 1;
-    };
-    /**
-     *
-     */
     const enum ShowState {
         None = 0,
         FPS = 1,
@@ -441,7 +432,6 @@ declare namespace paper.editor {
      */
     class GUIComponent extends Component {
         showStates: ShowState;
-        quaryValues: QuaryValues;
         readonly hierarchy: dat.GUI;
         readonly inspector: dat.GUI;
         readonly stats: Stats;
@@ -623,7 +613,6 @@ declare namespace paper.editor {
         static removeEventListener(type: string, fun: Function, thisObj: any): void;
         static dispatchEvent(event: BaseEvent): void;
         private static preDo();
-        private static initEditEnvironment();
     }
 }
 declare namespace paper.editor {

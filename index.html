@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Egret</title>
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="full-screen" content="true" />
     <meta name="screen-orientation" content="portrait" />
@@ -14,21 +13,38 @@
     <style>
         html,
         body {
-            -ms-touch-action: none;
-            background: #888888;
+            overflow: hidden;
+            background: #000000;
             padding: 0;
             border: 0;
             margin: 0;
             height: 100%;
+            touch-action: none;
         }
     </style>
+    <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
 </head>
 
 <body onContextMenu="return false">
-    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main"
-        data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30" data-content-width="640"
-        data-content-height="1136" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
-        data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    <div 
+        style="margin: auto;width: 100%;height: 100%;overflow: hidden;"
+        class="egret-player"
+        data-entry="main"
+        data-scene=""
+        data-tick-rate="auto"
+        data-frame-rate="auto"
+        data-content-width="1136"
+        data-content-height="640"
+        data-antialias="true"
+        data-alpha="false"
+
+        data-orientation="auto"
+        data-scale-mode="showAll"
+        data-multi-fingered="2"
+
+        data-show-stats="true"
+        data-show-inspector="auto"
+        >
     </div>
     <script>
 
@@ -66,13 +82,7 @@
             var manifest = JSON.parse(xhr.response);
             var list = manifest.initial.concat(manifest.game);
             loadScript(list, function () {
-                egret3d.runEgret({
-                    tickInterval: 1.0 / 60.0,
-                    frameInterval: 1.0 / 60.0,
-                    antialias: true,
-                    alpha: false
-                });
-                main();
+                egret3d.runEgret();
             });
         });
         xhr.send(null);

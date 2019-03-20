@@ -234,8 +234,17 @@ declare namespace paper {
      * 应用程序运行模式。
      */
     const enum PlayerMode {
+        /**
+         *
+         */
         Player = 1,
+        /**
+         *
+         */
         DebugPlayer = 2,
+        /**
+         *
+         */
         Editor = 4,
     }
     /**
@@ -787,13 +796,36 @@ declare namespace paper {
          */
         playerMode?: PlayerMode;
         /**
+         * 程序启动后需要显示调用的入口。
+         */
+        entity?: string;
+        /**
+         * 程序启动后加载的入口场景。
+         */
+        scene?: string;
+        /**
          * 逻辑帧频率, 单位为(帧/秒), 例如设置为 60 为每秒 60 帧
          */
-        tickRate?: number;
+        tickRate?: uint;
         /**
          * 渲染帧频率, 单位为(帧/秒), 例如设置为 60 为每秒 60 帧
          */
-        frameRate?: number;
+        frameRate?: uint;
+        /**
+         * 是否显示状态面板。
+         * - 未设置则默认为 PC 模式显示，手机模式不显示。
+         * - 包含 FPS、TPS、内存消耗、渲染耗时、DrawCall 等。
+         */
+        showStats?: boolean;
+        /**
+         * 是否显示 Inspector 面板。
+         * - 未设置则默认为 PC 模式显示，手机模式不显示。
+         */
+        showInspector?: boolean;
+        /**
+         * 可扩展的。
+         */
+        [key: string]: any;
     }
 }
 declare namespace paper {
@@ -6666,15 +6698,7 @@ declare namespace egret3d {
     /**
      *
      */
-    type RunOptions = {
-        /**
-         *
-         */
-        playerMode?: paper.PlayerMode;
-        /**
-         *
-         */
-        defaultScene?: string;
+    interface RunOptions extends paper.RunOptions {
         /**
          * 舞台宽。
          */
@@ -6698,7 +6722,7 @@ declare namespace egret3d {
         antialiasSamples?: number;
         canvas?: HTMLCanvasElement;
         webgl?: WebGLRenderingContext;
-    };
+    }
 }
 declare namespace egret3d {
     /**
@@ -10370,6 +10394,10 @@ declare namespace paper {
          */
         readonly version: string;
         /**
+         * 程序启动项。
+         */
+        readonly options: RunOptions;
+        /**
          * 系统管理器。
          */
         readonly systemManager: SystemManager;
@@ -10393,9 +10421,13 @@ declare namespace paper {
          */
         private _update({tickCount, frameCount}?);
         /**
-         *
+         * 初始化程序。
          */
         initialize(options: RunOptions): void;
+        /**
+         * 注册程序系统。
+         */
+        registerSystems(): void;
         /**
          * engine start
          *
@@ -10414,7 +10446,7 @@ declare namespace paper {
          */
         readonly isMobile: boolean;
         /**
-         * 运行模式。
+         * 程序的运行模式。
          */
         playerMode: PlayerMode;
     }
@@ -12310,7 +12342,7 @@ declare namespace egret3d {
      * 引擎启动入口。
      * @param options
      */
-    function runEgret(options?: RunOptions): void;
+    function runEgret(options?: RunOptions): Promise<void>;
 }
 interface Window {
     gltf: any;

@@ -448,6 +448,41 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 var paper;
 (function (paper) {
     /**
@@ -577,8 +612,17 @@ var paper;
      */
     var PlayerMode;
     (function (PlayerMode) {
+        /**
+         *
+         */
         PlayerMode[PlayerMode["Player"] = 1] = "Player";
+        /**
+         *
+         */
         PlayerMode[PlayerMode["DebugPlayer"] = 2] = "DebugPlayer";
+        /**
+         *
+         */
         PlayerMode[PlayerMode["Editor"] = 4] = "Editor";
     })(PlayerMode = paper.PlayerMode || (paper.PlayerMode = {}));
 })(paper || (paper = {}));
@@ -11593,10 +11637,14 @@ var paper;
         function EnableSystem() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        EnableSystem.prototype.onAwake = function () {
+        EnableSystem.prototype.onAwake = function (config) {
             var globalEntity = paper.Application.sceneManager.globalEntity;
             globalEntity.addComponent(paper.Clock);
             globalEntity.addComponent(paper.DisposeCollecter);
+            paper.clock.tickInterval = config.tickRate > 0 ? 1.0 / config.tickRate : 0;
+            paper.clock.frameInterval = config.frameRate > 0 ? 1.0 / config.frameRate : 0;
+            console.info("Tick rate: ", config.tickRate > 0 ? config.tickRate : "Auto");
+            console.info("Frame rate: ", config.frameRate > 0 ? config.frameRate : "Auto");
         };
         return EnableSystem;
     }(paper.BaseSystem));
@@ -26824,7 +26872,11 @@ var paper;
             /**
              * 引擎版本。
              */
-            this.version = "1.5.0.001";
+            this.version = "1.5.1.001";
+            /**
+             * 程序启动项。
+             */
+            this.options = null;
             /**
              * 系统管理器。
              */
@@ -26886,22 +26938,25 @@ var paper;
             systemManager._teardown();
         };
         /**
-         *
+         * 初始化程序。
          */
         ECS.prototype.initialize = function (options) {
-            this._playerMode = options.playerMode || 1 /* Player */;
+            console.info("Egret", this.version, "start.");
+            this.options = options;
+            this._playerMode = options.playerMode;
+        };
+        /**
+         * 注册程序系统。
+         */
+        ECS.prototype.registerSystems = function () {
             var _a = this, systemManager = _a.systemManager, gameObjectContext = _a.gameObjectContext;
-            systemManager.register(paper.EnableSystem, gameObjectContext, 1000 /* Enable */);
+            systemManager.register(paper.EnableSystem, gameObjectContext, 1000 /* Enable */, this.options);
             systemManager.register(paper.StartSystem, gameObjectContext, 2000 /* Start */);
             systemManager.register(paper.FixedUpdateSystem, gameObjectContext, 3000 /* FixedUpdate */);
             systemManager.register(paper.UpdateSystem, gameObjectContext, 4000 /* Update */);
             systemManager.register(paper.LateUpdateSystem, gameObjectContext, 6000 /* LateUpdate */);
             systemManager.register(paper.DisableSystem, gameObjectContext, 9000 /* Disable */);
             systemManager.preRegisterSystems();
-            paper.clock.tickInterval = options.tickRate ? 1.0 / options.tickRate : 0;
-            console.info("tick rate:", options.tickRate ? options.tickRate : "auto");
-            paper.clock.frameInterval = options.frameRate ? 1.0 / options.frameRate : 0;
-            console.info("frame rate:", options.frameRate ? options.frameRate : "auto");
         };
         /**
          * TODO
@@ -26942,6 +26997,7 @@ var paper;
                 default:
                     break;
             }
+            console.info("Egret start complete.");
         };
         /**
          * 显式更新
@@ -26991,7 +27047,7 @@ var paper;
         });
         Object.defineProperty(ECS.prototype, "playerMode", {
             /**
-             * 运行模式。
+             * 程序的运行模式。
              */
             get: function () {
                 return this._playerMode;
@@ -32611,82 +32667,198 @@ var paper;
 })(paper || (paper = {}));
 var egret3d;
 (function (egret3d) {
+    var _runEditor = false;
     /**
      * 引擎启动入口。
      * @param options
      */
     function runEgret(options) {
-        if (!options) {
-            options = {};
-        }
-        {
-            // TODO
-            egret.Sound = egret.web ? egret.web.HtmlSound : egret['wxgame']['HtmlSound']; //TODO:Sound
-            egret.Capabilities["renderMode" + ""] = "webgl";
-            var canvas = _getMainCanvas(options);
-            if (options.alpha === undefined) {
-                options.alpha = false;
-            }
-            if (options.antialias === undefined) {
-                options.antialias = true;
-            }
-            if (options.antialiasSamples === undefined) {
-                options.antialiasSamples = 4;
-            }
-            if (options.contentWidth === undefined) {
-                var defaultWidth = 1136;
-                if (window.canvas) {
-                    options.contentWidth = defaultWidth;
+        return __awaiter(this, void 0, void 0, function () {
+            var isWeb, urlSearchParams, playerDiv, canvas, param, param, param, _a, systemManager, gameObjectContext;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!options) {
+                            options = {};
+                        }
+                        {
+                            // TODO
+                            egret.Sound = egret.web ? egret.web.HtmlSound : egret['wxgame']['HtmlSound']; //TODO:Sound
+                            egret.Capabilities["renderMode" + ""] = "webgl";
+                            isWeb = !window.canvas;
+                            urlSearchParams = isWeb ? new URLSearchParams(location.search) : null;
+                            playerDiv = isWeb ? document.getElementsByClassName("egret-player")[0] : null;
+                            canvas = _getMainCanvas(options, playerDiv);
+                            if (options.playerMode === undefined) {
+                                param = urlSearchParams !== null ? urlSearchParams.get("player-mode") : "";
+                                if (param) {
+                                    options.playerMode = parseInt(param);
+                                }
+                                else {
+                                    options.playerMode = _parseInt(playerDiv, "data-player-mode", 1 /* Player */);
+                                }
+                            }
+                            if (options.entry === undefined) {
+                                param = urlSearchParams !== null ? urlSearchParams.get("entry") : "";
+                                if (param) {
+                                    options.entry = param;
+                                }
+                                else {
+                                    options.entry = _parseString(playerDiv, "data-entry", "");
+                                }
+                            }
+                            if (options.scene === undefined) {
+                                param = urlSearchParams !== null ? urlSearchParams.get("scene") : "";
+                                if (param) {
+                                    options.scene = param.split("\\").join('/');
+                                }
+                                else {
+                                    options.scene = _parseString(playerDiv, "data-scene", "");
+                                }
+                            }
+                            if (options.tickRate === undefined) {
+                                options.tickRate = _parseInt(playerDiv, "data-tick-rate", 0);
+                            }
+                            if (options.frameRate === undefined) {
+                                options.frameRate = _parseInt(playerDiv, "data-frame-rate", 0);
+                            }
+                            if (options.contentWidth === undefined) {
+                                options.contentWidth = _parseInt(playerDiv, "data-content-width", 1136);
+                            }
+                            if (options.contentHeight === undefined) {
+                                options.contentHeight = _parseInt(playerDiv, "data-content-height", 640);
+                            }
+                            if (options.alpha === undefined) {
+                                options.alpha = _parseBoolean(playerDiv, "data-alpha", false);
+                            }
+                            if (options.antialias === undefined) {
+                                options.alpha = _parseBoolean(playerDiv, "data-antialias", true);
+                            }
+                            if (options.antialiasSamples === undefined) {
+                                options.antialiasSamples = 4;
+                            }
+                            if (options.showStats === undefined) {
+                                options.showStats = _parseBoolean(playerDiv, "data-show-stats", !paper.Application.isMobile);
+                            }
+                            if (options.showInspector === undefined) {
+                                options.showInspector = _parseBoolean(playerDiv, "data-show-inspector", !paper.Application.isMobile);
+                            }
+                            options.canvas = canvas;
+                            options.webgl =
+                                canvas.getContext("webgl", options) ||
+                                    canvas.getContext("experimental-webgl", options);
+                        }
+                        if (!(options.playerMode === 4 /* Editor */)) return [3 /*break*/, 2];
+                        if (!!_runEditor) return [3 /*break*/, 2];
+                        _runEditor = true;
+                        return [4 /*yield*/, _entity(options)];
+                    case 1:
+                        _b.sent();
+                        return [2 /*return*/];
+                    case 2:
+                        _a = paper.Application, systemManager = _a.systemManager, gameObjectContext = _a.gameObjectContext;
+                        paper.Application.initialize(options);
+                        systemManager
+                            .preRegister(egret3d.webgl.BeginSystem, gameObjectContext, 0 /* Begin */, options)
+                            .preRegister(egret3d.webgl.WebGLRenderSystem, gameObjectContext, 8000 /* Renderer */, options)
+                            .preRegister(egret3d.webgl.InputSystem, gameObjectContext, 10000 /* End */, options)
+                            .preRegister(egret3d.CollisionSystem, gameObjectContext, 3000 /* FixedUpdate */)
+                            .preRegister(egret3d.AnimationSystem, gameObjectContext, 5000 /* Animation */)
+                            .preRegister(egret3d.MeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
+                            .preRegister(egret3d.SkinnedMeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
+                            .preRegister(egret3d.particle.ParticleSystem, gameObjectContext, 7000 /* BeforeRenderer */)
+                            .preRegister(egret3d.Egret2DRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */, options)
+                            .preRegister(egret3d.CameraAndLightSystem, gameObjectContext, 7000 /* BeforeRenderer */);
+                        paper.Application.registerSystems();
+                        paper.Application.start();
+                        if (!!_runEditor) return [3 /*break*/, 4];
+                        return [4 /*yield*/, _entity(options)];
+                    case 3:
+                        _b.sent();
+                        _b.label = 4;
+                    case 4: return [4 /*yield*/, _scene(options)];
+                    case 5:
+                        _b.sent();
+                        return [2 /*return*/];
                 }
-                else {
-                    var div = document.getElementsByClassName("egret-player")[0];
-                    options.contentWidth = parseInt(div.getAttribute("data-content-width")) || defaultWidth;
-                }
-            }
-            if (options.contentHeight === undefined) {
-                var defaultHeight = 640;
-                if (window.canvas) {
-                    options.contentHeight = defaultHeight;
-                }
-                else {
-                    var div = document.getElementsByClassName("egret-player")[0];
-                    options.contentHeight = parseInt(div.getAttribute("data-content-height")) || defaultHeight;
-                }
-            }
-            options.canvas = canvas;
-            options.webgl = canvas.getContext("webgl", options) || canvas.getContext("experimental-webgl", options);
-        }
-        var _a = paper.Application, version = _a.version, systemManager = _a.systemManager, gameObjectContext = _a.gameObjectContext;
-        console.info("Egret", version, "start.");
-        systemManager
-            .preRegister(egret3d.webgl.BeginSystem, gameObjectContext, 0 /* Begin */, options)
-            .preRegister(egret3d.webgl.WebGLRenderSystem, gameObjectContext, 8000 /* Renderer */, options)
-            .preRegister(egret3d.webgl.InputSystem, gameObjectContext, 10000 /* End */, options)
-            .preRegister(egret3d.CollisionSystem, gameObjectContext, 3000 /* FixedUpdate */)
-            .preRegister(egret3d.AnimationSystem, gameObjectContext, 5000 /* Animation */)
-            .preRegister(egret3d.MeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
-            .preRegister(egret3d.SkinnedMeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
-            .preRegister(egret3d.particle.ParticleSystem, gameObjectContext, 7000 /* BeforeRenderer */)
-            .preRegister(egret3d.Egret2DRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */, options)
-            .preRegister(egret3d.CameraAndLightSystem, gameObjectContext, 7000 /* BeforeRenderer */);
-        paper.Application.initialize(options);
-        paper.Application.start();
-        console.info("Egret start complete.");
+            });
+        });
     }
     egret3d.runEgret = runEgret;
-    function _getMainCanvas(options) {
+    function _parseBoolean(playerDiv, attributeName, defaultValue) {
+        if (playerDiv !== null) {
+            var attribute = playerDiv.getAttribute(attributeName);
+            if (attribute !== null && attribute !== "auto") {
+                return attribute === "true";
+            }
+        }
+        return defaultValue;
+    }
+    function _parseInt(playerDiv, attributeName, defaultValue) {
+        if (playerDiv !== null) {
+            var attribute = playerDiv.getAttribute(attributeName);
+            if (attribute !== null && attribute !== "auto") {
+                return parseInt(attribute);
+            }
+        }
+        return defaultValue;
+    }
+    function _parseString(playerDiv, attributeName, defaultValue) {
+        if (playerDiv !== null) {
+            var attribute = playerDiv.getAttribute(attributeName);
+            if (attribute !== null && attribute !== "auto") {
+                return attribute;
+            }
+        }
+        return defaultValue;
+    }
+    function _getMainCanvas(options, playerDiv) {
         if (window.canvas) {
             return window.canvas;
         }
-        else if (options.canvas) {
+        if (options.canvas) {
             return options.canvas;
         }
-        else {
-            var div = document.getElementsByClassName("egret-player")[0];
-            var canvas = document.createElement("canvas");
-            div.appendChild(canvas);
-            return canvas;
-        }
+        var canvas = document.createElement("canvas");
+        playerDiv.appendChild(canvas);
+        return canvas;
+    }
+    function _entity(options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var entity;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!options.entry) return [3 /*break*/, 2];
+                        entity = global[options.entry] || window[options.entry] || null;
+                        if (!(entity !== null)) return [3 /*break*/, 2];
+                        return [4 /*yield*/, entity()];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    }
+    function _scene(options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!options.scene) return [3 /*break*/, 3];
+                        return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
+                    case 1:
+                        _a.sent(); // TODO
+                        return [4 /*yield*/, RES.getResAsync(options.scene)];
+                    case 2:
+                        _a.sent();
+                        paper.Application.sceneManager.createScene(options.scene);
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
     }
 })(egret3d || (egret3d = {}));
 window.gltf = gltf;
