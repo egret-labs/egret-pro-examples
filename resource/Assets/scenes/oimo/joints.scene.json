@@ -52,6 +52,18 @@
                 },
                 {
                     "uuid": "df6effa7-5118-46f0-baa6-7b57254dcf9e"
+                },
+                {
+                    "uuid": "0ffa2b8a-9eef-4e65-b3b9-3d32d3a3e9b1"
+                },
+                {
+                    "uuid": "67a1dc92-949b-420d-ba81-47885e331416"
+                },
+                {
+                    "uuid": "585ae237-b48a-4c89-83b2-c1d55f3f81d1"
+                },
+                {
+                    "uuid": "234867b6-2aaf-4129-b312-37a68afcea85"
                 }
             ],
             "lightmapIntensity": 1,
@@ -280,6 +292,9 @@
                     "uuid": "6cee5f90-1330-4a4e-8f2f-45216e1c7528"
                 },
                 {
+                    "uuid": "333abcf1-267b-4281-b6c2-ae9a8d87ae75"
+                },
+                {
                     "uuid": "1ce4cc0e-34f6-41e4-8a8f-8267ced01e48"
                 },
                 {
@@ -331,6 +346,9 @@
                     "uuid": "3c852dbf-9c20-41ca-b20e-4c9d425e6ae4"
                 },
                 {
+                    "uuid": "9cb2f1fb-1af6-436d-9147-84daaa710a19"
+                },
+                {
                     "uuid": "14f0cf96-d2bf-40d2-bb67-8afe78987ba5"
                 },
                 {
@@ -359,6 +377,111 @@
                 },
                 {
                     "uuid": "3e680b5c-15ba-4c69-b664-836c05438dab"
+                }
+            ]
+        },
+        {
+            "uuid": "0ffa2b8a-9eef-4e65-b3b9-3d32d3a3e9b1",
+            "class": "paper.GameObject",
+            "name": "Universal Joint",
+            "extras": {},
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "b87ca07b-95fb-4fbe-be34-db118aabd6be"
+                },
+                {
+                    "uuid": "560f7fa4-b399-48f6-b8c5-154201733152"
+                },
+                {
+                    "uuid": "d3e5afed-079c-4e11-9823-5ec69b3d9237"
+                },
+                {
+                    "uuid": "7528d595-b4e2-465b-a4c8-9940c1378df0"
+                },
+                {
+                    "uuid": "ef22a553-300a-43ed-aac5-5fc0cf08726a"
+                },
+                {
+                    "uuid": "c20b2a9c-d90b-4e02-9b96-4f2efa6e25bb"
+                }
+            ]
+        },
+        {
+            "uuid": "67a1dc92-949b-420d-ba81-47885e331416",
+            "class": "paper.GameObject",
+            "name": "Universal Joint Connected",
+            "extras": {},
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "348fadfb-b43b-4cb9-811a-e401e49ca027"
+                },
+                {
+                    "uuid": "d0049f40-b0f1-4552-9837-631d3977596b"
+                },
+                {
+                    "uuid": "3f91d49a-249c-4df7-9df1-201cfdd607bd"
+                },
+                {
+                    "uuid": "90fe230d-9a48-4749-b5d3-d20ca30feb0b"
+                },
+                {
+                    "uuid": "3a4aa917-6556-4432-9fb4-2edf8364565e"
+                }
+            ]
+        },
+        {
+            "uuid": "585ae237-b48a-4c89-83b2-c1d55f3f81d1",
+            "class": "paper.GameObject",
+            "name": "Cone Twist Joint",
+            "extras": {},
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "64b749ac-7164-4717-9f97-789b6090f3b7"
+                },
+                {
+                    "uuid": "e0292fa4-4490-4b1d-bbec-85125744e571"
+                },
+                {
+                    "uuid": "9828393f-a532-495b-b5b6-3ee6a08d479f"
+                },
+                {
+                    "uuid": "dc2ae7b4-77dd-4b42-bcf4-c520b60c6440"
+                },
+                {
+                    "uuid": "fd2f59e1-af72-4105-9f40-4a270bbf23e4"
+                },
+                {
+                    "uuid": "7bbbadba-93e6-402f-bfd1-5b12a5f772c9"
+                },
+                {
+                    "uuid": "9526f819-e469-4f2a-ab4e-152f04ce94f7"
+                }
+            ]
+        },
+        {
+            "uuid": "234867b6-2aaf-4129-b312-37a68afcea85",
+            "class": "paper.GameObject",
+            "name": "Cone Twist Joint Connected",
+            "extras": {},
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "640903ed-8fab-4d38-8f07-9b95b3382e7b"
+                },
+                {
+                    "uuid": "625c90a4-a407-4dd3-a03c-8c044826fd65"
+                },
+                {
+                    "uuid": "c9adcd7c-dab0-4862-996c-22b6bb40cd33"
+                },
+                {
+                    "uuid": "d92709db-e788-4b52-9cfb-b0022a4502a7"
+                },
+                {
+                    "uuid": "674380f5-7ef3-4c73-884f-251fb45bd150"
                 }
             ]
         }
@@ -786,6 +909,19 @@
             "extras": {}
         },
         {
+            "uuid": "333abcf1-267b-4281-b6c2-ae9a8d87ae75",
+            "class": "egret3d.oimo.CylinderCollider",
+            "cylinder": [
+                0,
+                0,
+                0,
+                0.05,
+                0.05,
+                1
+            ],
+            "extras": {}
+        },
+        {
             "uuid": "1ce4cc0e-34f6-41e4-8a8f-8267ced01e48",
             "class": "egret3d.oimo.CylindricalJoint",
             "translationalSpringDamper": {
@@ -924,6 +1060,17 @@
             "extras": {}
         },
         {
+            "uuid": "9cb2f1fb-1af6-436d-9147-84daaa710a19",
+            "class": "egret3d.oimo.SphereCollider",
+            "sphere": [
+                0,
+                0,
+                0,
+                0.2
+            ],
+            "extras": {}
+        },
+        {
             "uuid": "14f0cf96-d2bf-40d2-bb67-8afe78987ba5",
             "class": "egret3d.oimo.SphericalJoint",
             "springDamper": {
@@ -999,6 +1146,297 @@
                 0.25,
                 0.25,
                 0.25
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "b87ca07b-95fb-4fbe-be34-db118aabd6be",
+            "class": "egret3d.MeshRenderer",
+            "_receiveShadows": true,
+            "_castShadows": true,
+            "materials": [
+                {
+                    "asset": 1
+                }
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "560f7fa4-b399-48f6-b8c5-154201733152",
+            "class": "egret3d.Transform",
+            "_localPosition": [
+                4,
+                0,
+                0
+            ],
+            "_localScale": [
+                1,
+                0.1,
+                0.1
+            ],
+            "children": [],
+            "extras": {}
+        },
+        {
+            "uuid": "d3e5afed-079c-4e11-9823-5ec69b3d9237",
+            "class": "egret3d.MeshFilter",
+            "mesh": {
+                "asset": 2
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "7528d595-b4e2-465b-a4c8-9940c1378df0",
+            "class": "egret3d.oimo.Rigidbody",
+            "_values": [
+                2,
+                1,
+                1,
+                0,
+                0
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "ef22a553-300a-43ed-aac5-5fc0cf08726a",
+            "class": "egret3d.oimo.BoxCollider",
+            "box": [
+                -0.5,
+                -0.05,
+                -0.05,
+                0.5,
+                0.05,
+                0.05
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "c20b2a9c-d90b-4e02-9b96-4f2efa6e25bb",
+            "class": "egret3d.oimo.UniversalJoint",
+            "springDamperX": {
+                "0": 4,
+                "1": 0.5,
+                "2": 0
+            },
+            "limitMotorX": {
+                "0": 1,
+                "1": 0,
+                "2": 1,
+                "3": 1
+            },
+            "springDamperY": {
+                "0": 4,
+                "1": 0.5,
+                "2": 0
+            },
+            "limitMotorY": {
+                "0": 1,
+                "1": 0,
+                "2": 10,
+                "3": 10
+            },
+            "_anchor": [
+                0.5,
+                0,
+                0
+            ],
+            "connectedRigidbody": {
+                "uuid": "90fe230d-9a48-4749-b5d3-d20ca30feb0b",
+                "class": "egret3d.oimo.Rigidbody"
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "348fadfb-b43b-4cb9-811a-e401e49ca027",
+            "class": "egret3d.MeshRenderer",
+            "_receiveShadows": true,
+            "_castShadows": true,
+            "materials": [
+                {
+                    "asset": 1
+                }
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "d0049f40-b0f1-4552-9837-631d3977596b",
+            "class": "egret3d.Transform",
+            "_localPosition": [
+                4.5,
+                -1,
+                0
+            ],
+            "_localScale": [
+                0.1,
+                1,
+                0.1
+            ],
+            "children": [],
+            "extras": {}
+        },
+        {
+            "uuid": "3f91d49a-249c-4df7-9df1-201cfdd607bd",
+            "class": "egret3d.MeshFilter",
+            "mesh": {
+                "asset": 2
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "90fe230d-9a48-4749-b5d3-d20ca30feb0b",
+            "class": "egret3d.oimo.Rigidbody",
+            "extras": {}
+        },
+        {
+            "uuid": "3a4aa917-6556-4432-9fb4-2edf8364565e",
+            "class": "egret3d.oimo.BoxCollider",
+            "box": [
+                -0.05,
+                -0.5,
+                -0.05,
+                0.05,
+                0.5,
+                0.05
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "64b749ac-7164-4717-9f97-789b6090f3b7",
+            "class": "egret3d.MeshRenderer",
+            "_receiveShadows": true,
+            "_castShadows": true,
+            "materials": [
+                {
+                    "asset": 1
+                }
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "e0292fa4-4490-4b1d-bbec-85125744e571",
+            "class": "egret3d.Transform",
+            "_localPosition": [
+                6,
+                0,
+                0
+            ],
+            "_localScale": [
+                0.1,
+                1,
+                0.1
+            ],
+            "children": [],
+            "extras": {}
+        },
+        {
+            "uuid": "9828393f-a532-495b-b5b6-3ee6a08d479f",
+            "class": "egret3d.MeshFilter",
+            "mesh": {
+                "asset": 2
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "dc2ae7b4-77dd-4b42-bcf4-c520b60c6440",
+            "class": "egret3d.oimo.Rigidbody",
+            "_values": [
+                2,
+                1,
+                1,
+                0,
+                0
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "fd2f59e1-af72-4105-9f40-4a270bbf23e4",
+            "class": "egret3d.oimo.BoxCollider",
+            "box": [
+                -0.05,
+                -0.5,
+                -0.05,
+                0.05,
+                0.5,
+                0.05
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "7bbbadba-93e6-402f-bfd1-5b12a5f772c9",
+            "class": "egret3d.oimo.ConeTwistJoint",
+            "twistLimitMotor": {
+                "0": 1,
+                "1": 0,
+                "2": 10,
+                "3": 10
+            },
+            "_anchor": [
+                0,
+                -0.5,
+                0
+            ],
+            "connectedRigidbody": {
+                "uuid": "d92709db-e788-4b52-9cfb-b0022a4502a7",
+                "class": "egret3d.oimo.Rigidbody"
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "9526f819-e469-4f2a-ab4e-152f04ce94f7",
+            "class": "Rotater",
+            "extras": {}
+        },
+        {
+            "uuid": "640903ed-8fab-4d38-8f07-9b95b3382e7b",
+            "class": "egret3d.MeshRenderer",
+            "_receiveShadows": true,
+            "_castShadows": true,
+            "materials": [
+                {
+                    "asset": 1
+                }
+            ],
+            "extras": {}
+        },
+        {
+            "uuid": "625c90a4-a407-4dd3-a03c-8c044826fd65",
+            "class": "egret3d.Transform",
+            "_localPosition": [
+                6,
+                -1.5,
+                0
+            ],
+            "_localScale": [
+                0.1,
+                1,
+                0.1
+            ],
+            "children": [],
+            "extras": {}
+        },
+        {
+            "uuid": "c9adcd7c-dab0-4862-996c-22b6bb40cd33",
+            "class": "egret3d.MeshFilter",
+            "mesh": {
+                "asset": 2
+            },
+            "extras": {}
+        },
+        {
+            "uuid": "d92709db-e788-4b52-9cfb-b0022a4502a7",
+            "class": "egret3d.oimo.Rigidbody",
+            "extras": {}
+        },
+        {
+            "uuid": "674380f5-7ef3-4c73-884f-251fb45bd150",
+            "class": "egret3d.oimo.BoxCollider",
+            "box": [
+                -0.05,
+                -0.5,
+                -0.05,
+                0.05,
+                0.5,
+                0.05
             ],
             "extras": {}
         }
