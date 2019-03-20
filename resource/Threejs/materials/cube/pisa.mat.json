@@ -9,9 +9,8 @@
                 "KHR_techniques_webgl": {
                     "technique": "builtin/cube.shader.json",
                     "values": {
-                        "opacity": 1,
                         "tFlip": 1,
-                        "tCube": "Threejs/textures/cube/SwedishRoyalCastle/SwedishRoyalCastle.image.json"
+                        "tCube": "Threejs/textures/cube/pisa/pisa.image.json"
                     }
                 },
                 "paper": {

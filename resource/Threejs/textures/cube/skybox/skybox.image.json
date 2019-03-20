@@ -13,12 +13,12 @@
     "images": [
         {
             "uri": [
-                "Threejs/textures/cube/SwedishRoyalCastle/px.jpg",
-                "Threejs/textures/cube/SwedishRoyalCastle/nx.jpg",
-                "Threejs/textures/cube/SwedishRoyalCastle/py.jpg",
-                "Threejs/textures/cube/SwedishRoyalCastle/ny.jpg",
-                "Threejs/textures/cube/SwedishRoyalCastle/pz.jpg",
-                "Threejs/textures/cube/SwedishRoyalCastle/nz.jpg"
+                "Threejs/textures/cube/skybox/px.jpg",
+                "Threejs/textures/cube/skybox/nx.jpg",
+                "Threejs/textures/cube/skybox/py.jpg",
+                "Threejs/textures/cube/skybox/ny.jpg",
+                "Threejs/textures/cube/skybox/pz.jpg",
+                "Threejs/textures/cube/skybox/nz.jpg"
             ]
         }
     ],
@@ -31,8 +31,8 @@
             "source": 0,
             "extensions": {
                 "paper": {
-                    "width": 512,
-                    "height": 512,
+                    "width": 1024,
+                    "height": 1024,
                     "format": 6407,
                     "faces": 6,
                     "levels": 0,

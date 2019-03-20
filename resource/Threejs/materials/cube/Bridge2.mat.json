@@ -1,0 +1,50 @@
+{
+    "version": "3",
+    "asset": {
+        "version": "2.0"
+    },
+    "materials": [
+        {
+            "extensions": {
+                "KHR_techniques_webgl": {
+                    "technique": "builtin/cube.shader.json",
+                    "values": {
+                        "tFlip": 1,
+                        "tCube": "Threejs/textures/cube/Bridge2/Bridge2.image.json"
+                    }
+                },
+                "paper": {
+                    "renderQueue": 1000,
+                    "states": {
+                        "enable": [
+                            2929,
+                            2884
+                        ],
+                        "functions": {
+                            "depthFunc": [
+                                515
+                            ],
+                            "depthMask": [
+                                false
+                            ],
+                            "frontFace": [
+                                2305
+                            ],
+                            "cullFace": [
+                                1028
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "extensionsRequired": [
+        "paper",
+        "KHR_techniques_webgl"
+    ],
+    "extensionsUsed": [
+        "paper",
+        "KHR_techniques_webgl"
+    ]
+}
