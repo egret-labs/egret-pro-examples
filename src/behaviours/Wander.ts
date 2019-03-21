@@ -1,22 +1,24 @@
 export default class Wander extends paper.Behaviour {
     @paper.editor.property(paper.editor.EditType.FLOAT)
     @paper.serializedField
-    public radius: float = 10.0;
+    public radius: float = 1.0;
 
     @paper.editor.property(paper.editor.EditType.VECTOR3)
     @paper.serializedField
-    public readonly timeScale: egret3d.Vector3 = egret3d.Vector3.create(1.0, 0.7, 0.4);
+    public readonly speed: egret3d.Vector3 = egret3d.Vector3.create(1.0, 0.7, 0.4);
 
     @paper.editor.property(paper.editor.EditType.VECTOR3)
     @paper.serializedField
     public readonly center: egret3d.Vector3 = egret3d.Vector3.create();
 
+    @paper.editor.property(paper.editor.EditType.GAMEOBJECT)
+    @paper.serializedField
     public target: paper.GameObject | null = null;
 
     public onUpdate() {
         const time = paper.clock.time;
         const radius = this.radius;
-        const timeScale = this.timeScale;
+        const timeScale = this.speed;
         const center = this.center;
 
         if (this.target) {

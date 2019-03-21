@@ -407,6 +407,11 @@
 			"name": "Assets/scenes/prefab_test.scene.json"
 		},
 		{
+			"url": "Assets/scenes/tests/collider_raycast.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/tests/collider_raycast.scene.json"
+		},
+		{
 			"url": "Assets/textures/effect_huojiantong_hm_001.image.json",
 			"type": "TextureDesc",
 			"name": "Assets/textures/effect_huojiantong_hm_001.image.json"
