@@ -4938,13 +4938,14 @@ var egret3d;
             ].filter(_filterEmptyLine).join("\n");
             return prefixContext;
         };
-        RenderState.prototype.initialize = function (config) {
+        RenderState.prototype.initialize = function () {
             _super.prototype.initialize.call(this);
             egret3d.renderState = this;
             //
+            var options = paper.Application.options;
             this.toneMapping = 1 /* LinearToneMapping */;
             this.gammaFactor = 2.0;
-            this.gammaInput = config.gammaInput ? true : false;
+            this.gammaInput = options.gammaInput !== undefined ? options.gammaInput : false;
             this.gammaOutput = false;
         };
         /**
@@ -10807,10 +10808,11 @@ var egret3d;
             function WebGLRenderState() {
                 return _super !== null && _super.apply(this, arguments) || this;
             }
-            WebGLRenderState.prototype.initialize = function (config) {
-                _super.prototype.initialize.call(this, config);
-                WebGLRenderState.canvas = config.canvas;
-                WebGLRenderState.webgl = config.webgl;
+            WebGLRenderState.prototype.initialize = function () {
+                _super.prototype.initialize.call(this);
+                var options = paper.Application.options;
+                WebGLRenderState.canvas = options.canvas;
+                WebGLRenderState.webgl = options.webgl;
                 var webgl = WebGLRenderState.webgl;
                 if (!webgl) {
                     return;
@@ -14090,7 +14092,7 @@ var egret3d;
             }
             else {
                 var scalerW = Math.min(size.w, screenSize.w) / screenSize.w;
-                var scalerH = size.h / screenSize.h;
+                var scalerH = Math.min(size.h, screenSize.h) / screenSize.h;
                 this.scaler = egret3d.math.lerp(scalerW, scalerH, this._matchFactor);
                 this._rotated = false;
                 viewport.w = Math.ceil(screenSize.w * this.scaler);
@@ -20608,9 +20610,9 @@ var egret3d;
                 paper.Matcher.create(egret3d.Egret2DRenderer),
             ];
         };
-        Egret2DRendererSystem.prototype.onAwake = function (config) {
-            Egret2DRendererSystem.canvas = config.canvas;
-            Egret2DRendererSystem.webgl = config.webgl;
+        Egret2DRendererSystem.prototype.onAwake = function () {
+            Egret2DRendererSystem.canvas = paper.Application.options.canvas;
+            Egret2DRendererSystem.webgl = paper.Application.options.webgl;
             var webgl = Egret2DRendererSystem.webgl;
             if (!webgl) {
                 return;
@@ -31322,16 +31324,17 @@ var egret3d;
                     canvas.style[egret.web.getPrefixStyleName("transform")] = transform;
                 }
             };
-            BeginSystem.prototype.onAwake = function (config) {
+            BeginSystem.prototype.onAwake = function () {
                 var _this = this;
+                var options = paper.Application.options;
                 var globalEntity = paper.Application.sceneManager.globalEntity;
-                var parentElement = config.canvas.parentElement;
+                var parentElement = options.canvas.parentElement;
                 var screenWidth = parentElement ? parentElement.clientWidth : window.innerWidth;
                 var screenHeight = parentElement ? parentElement.clientHeight : window.innerHeight;
-                this._canvas = config.canvas;
-                globalEntity.addComponent(egret3d.RenderState, config);
+                this._canvas = options.canvas;
+                globalEntity.addComponent(egret3d.RenderState);
                 globalEntity.addComponent(egret3d.Stage, {
-                    size: { w: config.contentWidth, h: config.contentHeight },
+                    size: { w: options.contentWidth, h: options.contentHeight },
                     screenSize: { w: screenWidth, h: screenHeight },
                 });
                 globalEntity.addComponent(egret3d.DefaultMeshes);
@@ -32604,8 +32607,8 @@ var egret3d;
                 canvas.removeEventListener("mouseout", this._onMouseEvent);
                 canvas.removeEventListener("mouseleave", this._onMouseEvent);
             };
-            InputSystem.prototype.onAwake = function (config) {
-                this._canvas = config.canvas;
+            InputSystem.prototype.onAwake = function () {
+                this._canvas = paper.Application.options.canvas;
             };
             InputSystem.prototype.onEnable = function () {
                 var canvas = this._canvas;
@@ -32736,101 +32739,22 @@ var egret3d;
      */
     function runEgret(options) {
         return __awaiter(this, void 0, void 0, function () {
-            var isWeb, urlSearchParams, playerDiv, canvas, param, param, param, param, param, _a, systemManager, gameObjectContext;
+            var _a, systemManager, gameObjectContext;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         if (!options) {
                             options = {};
                         }
+                        _formatOptions(options);
                         {
                             // TODO
                             egret.Sound = egret.web ? egret.web.HtmlSound : egret['wxgame']['HtmlSound']; //TODO:Sound
                             egret.Capabilities["renderMode" + ""] = "webgl";
-                            isWeb = !window.canvas;
-                            urlSearchParams = isWeb ? new URLSearchParams(location.search) : null;
-                            playerDiv = isWeb ? document.getElementsByClassName("egret-player")[0] : null;
-                            canvas = _getMainCanvas(options, playerDiv);
-                            if (options.playerMode === undefined) {
-                                param = urlSearchParams !== null ? urlSearchParams.get("player-mode") : "";
-                                if (param) {
-                                    options.playerMode = parseInt(param);
-                                }
-                                else {
-                                    options.playerMode = _parseInt(playerDiv, "data-player-mode", 1 /* Player */);
-                                }
-                            }
-                            if (options.editorEntry === undefined) {
-                                param = urlSearchParams !== null ? urlSearchParams.get("editor-entry") : "";
-                                if (param) {
-                                    options.editorEntry = param;
-                                }
-                                else {
-                                    options.editorEntry = _parseString(playerDiv, "data-editor-entry", "");
-                                }
-                            }
-                            if (options.entry === undefined) {
-                                param = urlSearchParams !== null ? urlSearchParams.get("entry") : "";
-                                if (param) {
-                                    options.entry = param;
-                                }
-                                else {
-                                    options.entry = _parseString(playerDiv, "data-entry", "");
-                                }
-                            }
-                            if (options.entry === undefined) {
-                                param = urlSearchParams !== null ? urlSearchParams.get("entry") : "";
-                                if (param) {
-                                    options.entry = param;
-                                }
-                                else {
-                                    options.entry = _parseString(playerDiv, "data-entry", "");
-                                }
-                            }
-                            if (options.scene === undefined) {
-                                param = urlSearchParams !== null ? urlSearchParams.get("scene") : "";
-                                if (param) {
-                                    options.scene = param.split("\\").join('/');
-                                }
-                                else {
-                                    options.scene = _parseString(playerDiv, "data-scene", "");
-                                }
-                            }
-                            if (options.tickRate === undefined) {
-                                options.tickRate = _parseInt(playerDiv, "data-tick-rate", 0);
-                            }
-                            if (options.frameRate === undefined) {
-                                options.frameRate = _parseInt(playerDiv, "data-frame-rate", 0);
-                            }
-                            if (options.contentWidth === undefined) {
-                                options.contentWidth = _parseInt(playerDiv, "data-content-width", 1136);
-                            }
-                            if (options.contentHeight === undefined) {
-                                options.contentHeight = _parseInt(playerDiv, "data-content-height", 640);
-                            }
-                            if (options.alpha === undefined) {
-                                options.alpha = _parseBoolean(playerDiv, "data-alpha", false);
-                            }
-                            if (options.antialias === undefined) {
-                                options.alpha = _parseBoolean(playerDiv, "data-antialias", true);
-                            }
-                            if (options.antialiasSamples === undefined) {
-                                options.antialiasSamples = 4;
-                            }
-                            if (options.showStats === undefined) {
-                                options.showStats = _parseBoolean(playerDiv, "data-show-stats", !paper.Application.isMobile);
-                            }
-                            if (options.showInspector === undefined) {
-                                options.showInspector = _parseBoolean(playerDiv, "data-show-inspector", !paper.Application.isMobile);
-                            }
-                            options.canvas = canvas;
-                            options.webgl =
-                                canvas.getContext("webgl", options) ||
-                                    canvas.getContext("experimental-webgl", options);
                         }
                         if (!(!_runEditor && options.editorEntry)) return [3 /*break*/, 2];
                         _runEditor = true;
-                        return [4 /*yield*/, _editorEntity(options)];
+                        return [4 /*yield*/, _editorEntry(options)];
                     case 1:
                         _b.sent();
                         return [3 /*break*/, 5];
@@ -32838,19 +32762,19 @@ var egret3d;
                         _a = paper.Application, systemManager = _a.systemManager, gameObjectContext = _a.gameObjectContext;
                         paper.Application.initialize(options);
                         systemManager
-                            .preRegister(egret3d.webgl.BeginSystem, gameObjectContext, 0 /* Begin */, options)
-                            .preRegister(egret3d.webgl.WebGLRenderSystem, gameObjectContext, 8000 /* Renderer */, options)
-                            .preRegister(egret3d.webgl.InputSystem, gameObjectContext, 10000 /* End */, options)
+                            .preRegister(egret3d.webgl.BeginSystem, gameObjectContext, 0 /* Begin */)
+                            .preRegister(egret3d.webgl.WebGLRenderSystem, gameObjectContext, 8000 /* Renderer */)
+                            .preRegister(egret3d.webgl.InputSystem, gameObjectContext, 10000 /* End */)
                             .preRegister(egret3d.CollisionSystem, gameObjectContext, 3000 /* FixedUpdate */)
                             .preRegister(egret3d.AnimationSystem, gameObjectContext, 5000 /* Animation */)
                             .preRegister(egret3d.MeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
                             .preRegister(egret3d.SkinnedMeshRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
                             .preRegister(egret3d.particle.ParticleSystem, gameObjectContext, 7000 /* BeforeRenderer */)
-                            .preRegister(egret3d.Egret2DRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */, options)
+                            .preRegister(egret3d.Egret2DRendererSystem, gameObjectContext, 7000 /* BeforeRenderer */)
                             .preRegister(egret3d.CameraAndLightSystem, gameObjectContext, 7000 /* BeforeRenderer */);
                         paper.Application.registerSystems();
                         paper.Application.start();
-                        return [4 /*yield*/, _entity(options)];
+                        return [4 /*yield*/, _entry(options)];
                     case 3:
                         _b.sent();
                         return [4 /*yield*/, _scene(options)];
@@ -32863,6 +32787,79 @@ var egret3d;
         });
     }
     egret3d.runEgret = runEgret;
+    function _formatOptions(options) {
+        var isWeb = !window.canvas;
+        var urlSearchParams = isWeb ? new URLSearchParams(location.search) : null;
+        var playerDiv = isWeb ? document.getElementsByClassName("egret-player")[0] : null;
+        var canvas = _getMainCanvas(options, playerDiv);
+        if (options.playerMode === undefined) {
+            var param = urlSearchParams !== null ? urlSearchParams.get("player-mode") : "";
+            if (param) {
+                options.playerMode = parseInt(param);
+            }
+            else {
+                options.playerMode = _parseInt(playerDiv, "data-player-mode", 1 /* Player */);
+            }
+        }
+        if (options.editorEntry === undefined) {
+            var param = urlSearchParams !== null ? urlSearchParams.get("editor-entry") : "";
+            if (param) {
+                options.editorEntry = param;
+            }
+            else {
+                options.editorEntry = _parseString(playerDiv, "data-editor-entry", "");
+            }
+        }
+        if (options.entry === undefined) {
+            var param = urlSearchParams !== null ? urlSearchParams.get("entry") : "";
+            if (param) {
+                options.entry = param;
+            }
+            else {
+                options.entry = _parseString(playerDiv, "data-entry", "");
+            }
+        }
+        if (options.scene === undefined) {
+            var param = urlSearchParams !== null ? urlSearchParams.get("scene") : "";
+            if (param) {
+                options.scene = param.split("\\").join('/');
+            }
+            else {
+                options.scene = _parseString(playerDiv, "data-scene", "");
+            }
+        }
+        if (options.tickRate === undefined) {
+            options.tickRate = _parseInt(playerDiv, "data-tick-rate", 0);
+        }
+        if (options.frameRate === undefined) {
+            options.frameRate = _parseInt(playerDiv, "data-frame-rate", 0);
+        }
+        if (options.contentWidth === undefined) {
+            options.contentWidth = _parseInt(playerDiv, "data-content-width", 1136);
+        }
+        if (options.contentHeight === undefined) {
+            options.contentHeight = _parseInt(playerDiv, "data-content-height", 640);
+        }
+        if (options.alpha === undefined) {
+            options.alpha = _parseBoolean(playerDiv, "data-alpha", false);
+        }
+        if (options.antialias === undefined) {
+            options.alpha = _parseBoolean(playerDiv, "data-antialias", true);
+        }
+        if (options.antialiasSamples === undefined) {
+            options.antialiasSamples = 4;
+        }
+        if (options.showStats === undefined) {
+            options.showStats = _parseBoolean(playerDiv, "data-show-stats", !paper.Application.isMobile);
+        }
+        if (options.showInspector === undefined) {
+            options.showInspector = _parseBoolean(playerDiv, "data-show-inspector", !paper.Application.isMobile);
+        }
+        options.canvas = canvas;
+        options.webgl =
+            canvas.getContext("webgl", options) ||
+                canvas.getContext("experimental-webgl", options);
+    }
     function _parseBoolean(playerDiv, attributeName, defaultValue) {
         if (playerDiv !== null) {
             var attribute = playerDiv.getAttribute(attributeName);
@@ -32901,7 +32898,7 @@ var egret3d;
         playerDiv.appendChild(canvas);
         return canvas;
     }
-    function _editorEntity(options) {
+    function _editorEntry(options) {
         return __awaiter(this, void 0, void 0, function () {
             var entry;
             return __generator(this, function (_a) {
@@ -32919,7 +32916,7 @@ var egret3d;
             });
         });
     }
-    function _entity(options) {
+    function _entry(options) {
         return __awaiter(this, void 0, void 0, function () {
             var entry;
             return __generator(this, function (_a) {

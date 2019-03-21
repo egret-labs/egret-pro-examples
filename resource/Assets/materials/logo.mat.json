@@ -7,7 +7,7 @@
         {
             "extensions": {
                 "KHR_techniques_webgl": {
-                    "technique": "builtin/meshlambert.shader.json",
+                    "technique": "builtin/meshphysical.shader.json",
                     "values": {
                         "uvTransform": [
                             1,

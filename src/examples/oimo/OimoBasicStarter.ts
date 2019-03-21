@@ -19,7 +19,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
             const cubeSize = egret3d.Vector3.create(Math.random() * 1.5 + 0.5, Math.random() * 1.5 + 0.5, Math.random() * 1.5 + 0.5).release();
             const gameObject = egret3d.creater.createGameObject(`Box ${i}`, {
                 mesh: egret3d.DefaultMeshes.CUBE,
-                material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                 castShadows: true,
                 receiveShadows: true,
             });

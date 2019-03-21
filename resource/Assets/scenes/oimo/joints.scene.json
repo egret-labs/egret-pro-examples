@@ -2,7 +2,7 @@
     "version": "5",
     "assets": [
         "Assets/prefabs/grid_room.prefab.json",
-        "builtin/meshlambert.mat.json",
+        "builtin/meshphysical.mat.json",
         "builtin/cube.mesh.bin",
         "builtin/cylinder.mesh.bin",
         "builtin/sphere.mesh.bin"

@@ -4088,7 +4088,7 @@ declare namespace egret3d {
         protected _getToneMappingFunction(toneMapping: ToneMapping): string;
         protected _getTexelEncodingFunction(functionName: string, encoding: TextureEncoding): string;
         protected _getTexelDecodingFunction(functionName: string, encoding: TextureEncoding): string;
-        initialize(config: RunOptions): void;
+        initialize(): void;
         /**
          *
          */
@@ -9184,7 +9184,7 @@ declare namespace egret3d {
         private _onTouchMove(pointer, signal);
         private _onTouchEnd(pointer, signal);
         protected getMatchers(): paper.IAllOfMatcher<paper.GameObject>[];
-        onAwake(config: RunOptions): void;
+        onAwake(): void;
         onEnable(): void;
         onDisable(): void;
         onEntityAdded(entity: paper.GameObject): void;
@@ -10783,6 +10783,7 @@ declare namespace egret3d {
         removeDefine(defineString: string, value?: number | string): this;
         /**
          * 设置该材质的混合模式。
+         * - 该设置会修改深度缓冲的状态。
          * @param blend 混合模式。
          * @param renderQueue 渲染顺序。
          * @param opacity 透明度。（未设置则不更改透明度）

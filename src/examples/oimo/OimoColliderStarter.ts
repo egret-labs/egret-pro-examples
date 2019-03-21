@@ -23,7 +23,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
                     const size = egret3d.Vector3.create(Math.random() * 1.5 + 0.5, Math.random() * 1.5 + 0.5, Math.random() * 1.5 + 0.5).release();
                     entity = egret3d.creater.createGameObject(`Box ${i}`, {
                         mesh: egret3d.DefaultMeshes.CUBE,
-                        material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                        material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                         castShadows: true,
                         receiveShadows: true,
                     });
@@ -38,7 +38,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
                     const size = Math.random() * 1.5 + 0.5;
                     entity = egret3d.creater.createGameObject(`Sphere ${i}`, {
                         mesh: egret3d.DefaultMeshes.SPHERE,
-                        material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                        material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                         castShadows: true,
                         receiveShadows: true,
                     });
@@ -54,7 +54,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
                     const sizeB = Math.random() * 1.5 + 0.5;
                     entity = egret3d.creater.createGameObject(`Cylinder ${i}`, {
                         mesh: egret3d.DefaultMeshes.CYLINDER,
-                        material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                        material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                         castShadows: true,
                         receiveShadows: true,
                     });
@@ -72,7 +72,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
                     const sizeB = Math.random() * 1.5 + 0.5;
                     entity = egret3d.creater.createGameObject(`Cone ${i}`, {
                         mesh: egret3d.DefaultMeshes.CONE,
-                        material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                        material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                         castShadows: true,
                         receiveShadows: true,
                     });
@@ -89,7 +89,7 @@ class StarterSystem extends paper.BaseSystem<paper.GameObject> {
                     const sizeB = Math.random() * 1.5 + 0.5;
                     entity = egret3d.creater.createGameObject(`Capsule ${i}`, {
                         mesh: egret3d.MeshBuilder.createCapsule(sizeA * 0.5, sizeB * 0.5),
-                        material: egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT),
+                        material: egret3d.DefaultMaterials.MESH_PHYSICAL,
                         castShadows: true,
                         receiveShadows: true,
                     });
