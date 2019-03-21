@@ -1,21 +1,21 @@
 
 export default class InputTest extends paper.Behaviour {
 
-    private _cubeLeft: paper.GameObject | null = null;
-    private _cubeMiddle: paper.GameObject | null = null;
-    private _cubeRight: paper.GameObject | null = null;
-    private _cubeBack: paper.GameObject | null = null;
-    private _cubeForward: paper.GameObject | null = null;
-    private _cubeEraser: paper.GameObject | null = null;
+    private _cubeLeft: paper.GameObject;
+    private _cubeMiddle: paper.GameObject;
+    private _cubeRight: paper.GameObject;
+    private _cubeBack: paper.GameObject;
+    private _cubeForward: paper.GameObject;
+    private _cubeEraser: paper.GameObject;
     private readonly _holdCubes: { [key: string]: paper.GameObject } = {};
 
     public onStart() {
-        this._cubeLeft = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Left Mouse Or Touch");
-        this._cubeMiddle = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Middle Moush");
-        this._cubeRight = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Right Mouse");
-        this._cubeBack = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Back");
-        this._cubeForward = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Forward");
-        this._cubeEraser = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Eraser");
+        this._cubeLeft = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Left Mouse Or Touch")!;
+        this._cubeMiddle = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Middle Moush")!;
+        this._cubeRight = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Right Mouse")!;
+        this._cubeBack = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Back")!;
+        this._cubeForward = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Forward")!;
+        this._cubeEraser = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Eraser")!;
     }
 
     public onUpdate() {
