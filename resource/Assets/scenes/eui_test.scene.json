@@ -1,1 +1,194 @@
-{"version":5,"assets":["Assets/materials/logo.mat.json","builtin/cube.mesh.bin"],"objects":[{"uuid":4384,"class":"paper.Scene","name":"newScene(1).scene.json","extras":{},"entities":[{"uuid":"e54d316e-d54e-435e-aeaa-77bbb9784de7"},{"uuid":"00dd1a46-580e-48e4-b853-fb3c8c308002"},{"uuid":"6d9ba4b7-35b0-49a8-bceb-45b4b08cff01"},{"uuid":"9ec13947-3ebf-4999-bd96-7c89d7a40213"},{"uuid":"683edffa-5402-4fe4-b379-4bb4dd3b93b4"},{"uuid":"b40b91f3-d77d-43e0-911e-c441a6c5d86c"}],"lightmapIntensity":1,"ambientColor":[0.2,0.2,0.25,1],"fog":[0,0.01,0.01,100,0.5,0.5,0.5,1],"lightmaps":[]},{"uuid":"e54d316e-d54e-435e-aeaa-77bbb9784de7","class":"paper.GameObject","layer":"1","name":"Egret2D Root","extras":{},"_enabled":true,"components":[{"uuid":"52b92c48-1718-4485-b054-f98c34930d72"},{"uuid":"5f9770d0-2750-41cf-95eb-3b8595fe35c5"},{"uuid":"ccd849d6-f9cf-4d1c-8ea2-24d90416a406"}]},{"uuid":"00dd1a46-580e-48e4-b853-fb3c8c308002","class":"paper.GameObject","name":"Bottom Cube","extras":{},"_enabled":true,"components":[{"uuid":"1b54f7ee-3f39-4d74-9bd5-365ed3207a32"},{"uuid":"6e47cac4-369d-4edc-b633-3105183389bc"},{"uuid":"890b9bc2-a712-4448-a50d-a6e12f00ab12"},{"uuid":"9ae7e609-6c54-4140-868f-9aa56eda673a"}]},{"uuid":"6d9ba4b7-35b0-49a8-bceb-45b4b08cff01","class":"paper.GameObject","name":"Main Camera","tag":"MainCamera","extras":{},"_enabled":true,"components":[{"uuid":"8c1ec8db-e453-46d4-8932-4ab47f06695f"},{"uuid":"a5235105-1ed1-4be1-901d-42ba1bdc4eed"}]},{"uuid":"9ec13947-3ebf-4999-bd96-7c89d7a40213","class":"paper.GameObject","name":"Top Camera","extras":{},"_enabled":true,"components":[{"uuid":"95fe703f-2db2-4d8a-9d9d-2f45381e1250"},{"uuid":"6a3f179c-7770-494f-a311-02bfc4ecb767"}]},{"uuid":"683edffa-5402-4fe4-b379-4bb4dd3b93b4","class":"paper.GameObject","name":"Camera Group","extras":{},"_enabled":true,"components":[{"uuid":"0c4895c4-7587-444d-b273-bbfcc31c6ea7"}]},{"uuid":"b40b91f3-d77d-43e0-911e-c441a6c5d86c","class":"paper.GameObject","layer":"2048","name":"Top Cube","extras":{},"_enabled":true,"components":[{"uuid":"92e7056e-3707-4c77-885b-72170ff70623"},{"uuid":"cd2c45d5-4b47-4908-a916-e4e5a2e9cdb0"},{"uuid":"98a1a5f4-e09c-4b50-a14c-979d9fba8fe6"},{"uuid":"670ca9fa-e1ca-4175-be5d-efe9d42ed909"}]}],"components":[{"uuid":"52b92c48-1718-4485-b054-f98c34930d72","class":"egret3d.Transform","extras":{}},{"uuid":"5f9770d0-2750-41cf-95eb-3b8595fe35c5","class":"egret3d.Egret2DRenderer","extras":{}},{"uuid":"ccd849d6-f9cf-4d1c-8ea2-24d90416a406","class":"EUITest","extras":{}},{"uuid":"1b54f7ee-3f39-4d74-9bd5-365ed3207a32","class":"egret3d.MeshRenderer","materials":[{"asset":0}],"extras":{}},{"uuid":"6e47cac4-369d-4edc-b633-3105183389bc","class":"egret3d.Transform","_localPosition":[-2,0,0],"extras":{}},{"uuid":"890b9bc2-a712-4448-a50d-a6e12f00ab12","class":"egret3d.MeshFilter","mesh":{"asset":1},"extras":{}},{"uuid":"9ae7e609-6c54-4140-868f-9aa56eda673a","class":"RotateBehaviour","extras":{}},{"uuid":"8c1ec8db-e453-46d4-8932-4ab47f06695f","class":"egret3d.Transform","extras":{}},{"uuid":"a5235105-1ed1-4be1-901d-42ba1bdc4eed","class":"egret3d.Camera","cullingMask":"1","extras":{}},{"uuid":"95fe703f-2db2-4d8a-9d9d-2f45381e1250","class":"egret3d.Transform","extras":{}},{"uuid":"6a3f179c-7770-494f-a311-02bfc4ecb767","class":"egret3d.Camera","bufferMask":"0","cullingMask":"2048","order":10,"extras":{}},{"uuid":"0c4895c4-7587-444d-b273-bbfcc31c6ea7","class":"egret3d.Transform","_localPosition":[0,10,-10],"_localRotation":[0.3826834323650898,0,0,0.9238795325112867],"children":[{"uuid":"8c1ec8db-e453-46d4-8932-4ab47f06695f"},{"uuid":"95fe703f-2db2-4d8a-9d9d-2f45381e1250"}],"extras":{}},{"uuid":"92e7056e-3707-4c77-885b-72170ff70623","class":"egret3d.MeshRenderer","materials":[{"asset":0}],"extras":{}},{"uuid":"cd2c45d5-4b47-4908-a916-e4e5a2e9cdb0","class":"egret3d.Transform","_localPosition":[2,0,0],"extras":{}},{"uuid":"98a1a5f4-e09c-4b50-a14c-979d9fba8fe6","class":"egret3d.MeshFilter","mesh":{"asset":1},"extras":{}},{"uuid":"670ca9fa-e1ca-4175-be5d-efe9d42ed909","class":"RotateBehaviour","extras":{}}]}
+{
+    "version": 5,
+    "assets": ["Assets/materials/logo.mat.json", "builtin/cube.mesh.bin"],
+    "objects": [{
+        "uuid": "4384",
+        "class": "paper.Scene",
+        "name": "newScene(1).scene.json",
+        "extras": {},
+        "entities": [{
+            "uuid": "e54d316e-d54e-435e-aeaa-77bbb9784de7"
+        }, {
+            "uuid": "00dd1a46-580e-48e4-b853-fb3c8c308002"
+        }, {
+            "uuid": "6d9ba4b7-35b0-49a8-bceb-45b4b08cff01"
+        }, {
+            "uuid": "9ec13947-3ebf-4999-bd96-7c89d7a40213"
+        }, {
+            "uuid": "683edffa-5402-4fe4-b379-4bb4dd3b93b4"
+        }, {
+            "uuid": "b40b91f3-d77d-43e0-911e-c441a6c5d86c"
+        }],
+        "lightmapIntensity": 1,
+        "ambientColor": [0.2, 0.2, 0.25, 1],
+        "fog": [0, 0.01, 0.01, 100, 0.5, 0.5, 0.5, 1],
+        "lightmaps": []
+    }, {
+        "uuid": "e54d316e-d54e-435e-aeaa-77bbb9784de7",
+        "class": "paper.GameObject",
+        "layer": "1",
+        "name": "Egret2D Root",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "52b92c48-1718-4485-b054-f98c34930d72"
+        }, {
+            "uuid": "5f9770d0-2750-41cf-95eb-3b8595fe35c5"
+        }, {
+            "uuid": "ccd849d6-f9cf-4d1c-8ea2-24d90416a406"
+        }]
+    }, {
+        "uuid": "00dd1a46-580e-48e4-b853-fb3c8c308002",
+        "class": "paper.GameObject",
+        "name": "Bottom Cube",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "1b54f7ee-3f39-4d74-9bd5-365ed3207a32"
+        }, {
+            "uuid": "6e47cac4-369d-4edc-b633-3105183389bc"
+        }, {
+            "uuid": "890b9bc2-a712-4448-a50d-a6e12f00ab12"
+        }, {
+            "uuid": "9ae7e609-6c54-4140-868f-9aa56eda673a"
+        }]
+    }, {
+        "uuid": "6d9ba4b7-35b0-49a8-bceb-45b4b08cff01",
+        "class": "paper.GameObject",
+        "name": "Main Camera",
+        "tag": "MainCamera",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "8c1ec8db-e453-46d4-8932-4ab47f06695f"
+        }, {
+            "uuid": "a5235105-1ed1-4be1-901d-42ba1bdc4eed"
+        }]
+    }, {
+        "uuid": "9ec13947-3ebf-4999-bd96-7c89d7a40213",
+        "class": "paper.GameObject",
+        "name": "Top Camera",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "95fe703f-2db2-4d8a-9d9d-2f45381e1250"
+        }, {
+            "uuid": "6a3f179c-7770-494f-a311-02bfc4ecb767"
+        }]
+    }, {
+        "uuid": "683edffa-5402-4fe4-b379-4bb4dd3b93b4",
+        "class": "paper.GameObject",
+        "name": "Camera Group",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "0c4895c4-7587-444d-b273-bbfcc31c6ea7"
+        }]
+    }, {
+        "uuid": "b40b91f3-d77d-43e0-911e-c441a6c5d86c",
+        "class": "paper.GameObject",
+        "layer": "2048",
+        "name": "Top Cube",
+        "extras": {},
+        "_enabled": true,
+        "components": [{
+            "uuid": "92e7056e-3707-4c77-885b-72170ff70623"
+        }, {
+            "uuid": "cd2c45d5-4b47-4908-a916-e4e5a2e9cdb0"
+        }, {
+            "uuid": "98a1a5f4-e09c-4b50-a14c-979d9fba8fe6"
+        }, {
+            "uuid": "670ca9fa-e1ca-4175-be5d-efe9d42ed909"
+        }]
+    }],
+    "components": [{
+        "uuid": "52b92c48-1718-4485-b054-f98c34930d72",
+        "class": "egret3d.Transform",
+        "extras": {}
+    }, {
+        "uuid": "5f9770d0-2750-41cf-95eb-3b8595fe35c5",
+        "class": "egret3d.Egret2DRenderer",
+        "extras": {}
+    }, {
+        "uuid": "ccd849d6-f9cf-4d1c-8ea2-24d90416a406",
+        "class": "EUITest",
+        "extras": {}
+    }, {
+        "uuid": "1b54f7ee-3f39-4d74-9bd5-365ed3207a32",
+        "class": "egret3d.MeshRenderer",
+        "materials": [{
+            "asset": 0
+        }],
+        "extras": {}
+    }, {
+        "uuid": "6e47cac4-369d-4edc-b633-3105183389bc",
+        "class": "egret3d.Transform",
+        "_localPosition": [-2, 0, 0],
+        "extras": {}
+    }, {
+        "uuid": "890b9bc2-a712-4448-a50d-a6e12f00ab12",
+        "class": "egret3d.MeshFilter",
+        "mesh": {
+            "asset": 1
+        },
+        "extras": {}
+    }, {
+        "uuid": "9ae7e609-6c54-4140-868f-9aa56eda673a",
+        "class": "RotateBehaviour",
+        "extras": {}
+    }, {
+        "uuid": "8c1ec8db-e453-46d4-8932-4ab47f06695f",
+        "class": "egret3d.Transform",
+        "extras": {}
+    }, {
+        "uuid": "a5235105-1ed1-4be1-901d-42ba1bdc4eed",
+        "class": "egret3d.Camera",
+        "cullingMask": "1",
+        "extras": {}
+    }, {
+        "uuid": "95fe703f-2db2-4d8a-9d9d-2f45381e1250",
+        "class": "egret3d.Transform",
+        "extras": {}
+    }, {
+        "uuid": "6a3f179c-7770-494f-a311-02bfc4ecb767",
+        "class": "egret3d.Camera",
+        "bufferMask": "0",
+        "cullingMask": "2048",
+        "order": 10,
+        "extras": {}
+    }, {
+        "uuid": "0c4895c4-7587-444d-b273-bbfcc31c6ea7",
+        "class": "egret3d.Transform",
+        "_localPosition": [0, 10, -10],
+        "_localRotation": [0.3826834323650898, 0, 0, 0.9238795325112867],
+        "children": [{
+            "uuid": "8c1ec8db-e453-46d4-8932-4ab47f06695f"
+        }, {
+            "uuid": "95fe703f-2db2-4d8a-9d9d-2f45381e1250"
+        }],
+        "extras": {}
+    }, {
+        "uuid": "92e7056e-3707-4c77-885b-72170ff70623",
+        "class": "egret3d.MeshRenderer",
+        "materials": [{
+            "asset": 0
+        }],
+        "extras": {}
+    }, {
+        "uuid": "cd2c45d5-4b47-4908-a916-e4e5a2e9cdb0",
+        "class": "egret3d.Transform",
+        "_localPosition": [2, 0, 0],
+        "extras": {}
+    }, {
+        "uuid": "98a1a5f4-e09c-4b50-a14c-979d9fba8fe6",
+        "class": "egret3d.MeshFilter",
+        "mesh": {
+            "asset": 1
+        },
+        "extras": {}
+    }, {
+        "uuid": "670ca9fa-e1ca-4175-be5d-efe9d42ed909",
+        "class": "RotateBehaviour",
+        "extras": {}
+    }]
+}
