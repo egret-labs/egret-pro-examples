@@ -5,8 +5,9 @@
 		"libs/modules/eui/eui.js",
 		"libs/modules/tween/tween.js",
 		"libs/modules/assetsmanager/assetsmanager.js",
-		"egret3d/egret3d.js",
-		"inspector/inspector.js",
+		"libs/egret3d/egret3d.js",
+		"libs/inspector/inspector.js",
+		"libs/oimo/oimo.js",
 		"libs/modules/promise/promise.js"
 	],
 	"game": [

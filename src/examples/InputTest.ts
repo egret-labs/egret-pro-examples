@@ -25,81 +25,82 @@ export default class InputTest extends paper.Behaviour {
         // Mouse wheel.
         const mouseWheel = inputCollecter.mouseWheel * 0.5;
         if (mouseWheel !== 0.0) {
-            this._cubeLeft.transform.rotate(mouseWheel, 0.0, 0.0);
-            this._cubeMiddle.transform.rotate(mouseWheel, 0.0, 0.0);
-            this._cubeRight.transform.rotate(mouseWheel, 0.0, 0.0);
-            this._cubeBack.transform.rotate(mouseWheel, 0.0, 0.0);
-            this._cubeForward.transform.rotate(mouseWheel, 0.0, 0.0);
-            this._cubeEraser.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeLeft!.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeMiddle!.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeRight!.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeBack!.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeForward!.transform.rotate(mouseWheel, 0.0, 0.0);
+            this._cubeEraser!.transform.rotate(mouseWheel, 0.0, 0.0);
         }
         // Mouse key or default touch.
         if (defaultPointer.isDown()) {
-            this._cubeLeft.transform.translate(0.0, 1.0, 0.0);
+            this._cubeLeft!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold()) {
-            this._cubeLeft.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeLeft!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp()) {
-            this._cubeLeft.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeLeft!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         //
         if (defaultPointer.isDown(egret3d.PointerButtonsType.MiddleMouse)) {
-            this._cubeMiddle.transform.translate(0.0, 1.0, 0.0);
+            this._cubeMiddle!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold(egret3d.PointerButtonsType.MiddleMouse)) {
-            this._cubeMiddle.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeMiddle!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp(egret3d.PointerButtonsType.MiddleMouse)) {
-            this._cubeMiddle.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeMiddle!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         //
         if (defaultPointer.isDown(egret3d.PointerButtonsType.RightMouse)) {
-            this._cubeRight.transform.translate(0.0, 1.0, 0.0);
+            this._cubeRight!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold(egret3d.PointerButtonsType.RightMouse)) {
-            this._cubeRight.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeRight!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp(egret3d.PointerButtonsType.RightMouse)) {
-            this._cubeRight.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeRight!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         //
         if (defaultPointer.isDown(egret3d.PointerButtonsType.Back)) {
-            this._cubeBack.transform.translate(0.0, 1.0, 0.0);
+            this._cubeBack!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold(egret3d.PointerButtonsType.Back)) {
-            this._cubeBack.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeBack!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp(egret3d.PointerButtonsType.Back)) {
-            this._cubeBack.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeBack!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         //
         if (defaultPointer.isDown(egret3d.PointerButtonsType.Forward)) {
-            this._cubeForward.transform.translate(0.0, 1.0, 0.0);
+            this._cubeForward!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold(egret3d.PointerButtonsType.Forward)) {
-            this._cubeForward.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeForward!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp(egret3d.PointerButtonsType.Forward)) {
-            this._cubeForward.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeForward!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         //
         if (defaultPointer.isDown(egret3d.PointerButtonsType.PenEraser)) {
-            this._cubeEraser.transform.translate(0.0, 1.0, 0.0);
+            this._cubeEraser!.transform.translate(0.0, 1.0, 0.0);
         }
         else if (defaultPointer.isHold(egret3d.PointerButtonsType.PenEraser)) {
-            this._cubeEraser.transform.rotate(0.0, 0.05, 0.0);
+            this._cubeEraser!.transform.rotate(0.0, 0.05, 0.0);
         }
         else if (defaultPointer.isUp(egret3d.PointerButtonsType.PenEraser)) {
-            this._cubeEraser.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
+            this._cubeEraser!.transform.translate(0.0, -1.0, 0.0).setLocalEuler(0.0, 0.0, 0.0);
         }
         // Muti-touch.
+        const logoMaterial = paper.Asset.find("Assets/materials/logo.mat.json") as egret3d.Material;
         for (const pointer of inputCollecter.getDownPointers()) {
             const pointerId = pointer.event!.pointerId;
 
             if (!(pointerId in this._holdCubes)) {
                 const cube = egret3d.creater.createGameObject(`Touch ${pointerId}`, {
                     mesh: egret3d.DefaultMeshes.CUBE,
-                    material: egret3d.DefaultMaterials.MESH_PHONG,
+                    material: logoMaterial,
                     castShadows: true,
                     receiveShadows: true,
                 });

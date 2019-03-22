@@ -1,118 +1,74 @@
 {
-    "version": 5,
-    "assets": ["Assets/prefabs/grid_room.prefab.json"],
-    "objects": [{
-        "uuid": "4384",
-        "class": "paper.Scene",
-        "name": "newScene.scene.json",
-        "extras": {},
-        "entities": [{
-            "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4"
-        }, {
-            "uuid": "2ddcc98f-6f4d-429c-8f43-4ad3080eb520"
-        }, {
-            "uuid": "c9a702c3-1a18-47a6-b515-2b8fa61a8fe8"
-        }, {
-            "uuid": "6d6c3450-2b2f-4a30-9a0b-c43aca43191a"
-        }],
-        "lightmapIntensity": 1,
-        "ambientColor": [0.2, 0.2, 0.25, 1],
-        "fog": [0, 0.01, 0.01, 100, 0.5, 0.5, 0.5, 1],
-        "lightmaps": []
-    }, {
-        "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4",
-        "class": "paper.GameObject",
-        "name": "Main Camera",
-        "tag": "MainCamera",
-        "extras": {},
-        "_enabled": true,
-        "components": [{
-            "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066"
-        }, {
-            "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21"
-        }]
-    }, {
-        "uuid": "2ddcc98f-6f4d-429c-8f43-4ad3080eb520",
-        "class": "paper.GameObject",
-        "name": "Grid Room",
-        "extras": {
-            "linkedID": "17b84f5f-17e5-4068-8de8-79a9ccf3a645",
-            "prefab": {
-                "asset": 0
-            }
+    "version": "5",
+    "assets": [],
+    "objects": [
+        {
+            "uuid": "4384",
+            "class": "paper.Scene",
+            "name": "newScene.scene.json",
+            "extras": {},
+            "entities": [
+                {
+                    "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4"
+                }
+            ],
+            "lightmapIntensity": 1,
+            "ambientColor": [
+                0.2,
+                0.2,
+                0.25,
+                1
+            ],
+            "fog": [
+                0,
+                0.01,
+                0.01,
+                100,
+                0.5,
+                0.5,
+                0.5,
+                1
+            ],
+            "lightmaps": []
         },
-        "components": [{
-            "uuid": "33ea1932-7177-4209-93fc-f0b70d6dba95"
-        }]
-    }, {
-        "uuid": "c9a702c3-1a18-47a6-b515-2b8fa61a8fe8",
-        "class": "paper.GameObject",
-        "extras": {
-            "linkedID": "5b850af7-d248-44c8-aee1-86e8cfdc521d",
-            "rootID": "2ddcc98f-6f4d-429c-8f43-4ad3080eb520"
+        {
+            "uuid": "b1205468-e1ae-443c-9b8f-3c7275efcad4",
+            "class": "paper.GameObject",
+            "name": "Main Camera",
+            "tag": "MainCamera",
+            "extras": {},
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066"
+                },
+                {
+                    "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21"
+                }
+            ]
+        }
+    ],
+    "components": [
+        {
+            "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066",
+            "class": "egret3d.Transform",
+            "_localPosition": [
+                0,
+                20,
+                -10
+            ],
+            "_localRotation": [
+                0.3826834323650898,
+                0,
+                0,
+                0.9238795325112867
+            ],
+            "extras": {}
         },
-        "components": [{
-            "uuid": "d6b92156-31e6-4a96-9e1f-f52f2a6a99a7"
-        }, {
-            "uuid": "681615c8-4e53-441b-8c18-7c9b5edc4cd1"
-        }]
-    }, {
-        "uuid": "6d6c3450-2b2f-4a30-9a0b-c43aca43191a",
-        "class": "paper.GameObject",
-        "extras": {
-            "linkedID": "f82fafd5-d54f-4d60-ab97-a3a9d453b822",
-            "rootID": "2ddcc98f-6f4d-429c-8f43-4ad3080eb520"
-        },
-        "components": [{
-            "uuid": "7e43594a-939d-4a72-abdf-b218a919f259"
-        }, {
-            "uuid": "906870c9-014b-4391-884f-e6ba638e8a8e"
-        }]
-    }],
-    "components": [{
-        "uuid": "a715344f-825c-42f6-8d2b-b01c01d71066",
-        "class": "egret3d.Transform",
-        "_localPosition": [0, 20, -10],
-        "_localRotation": [0.3826834323650898, 0, 0, 0.9238795325112867],
-        "extras": {}
-    }, {
-        "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21",
-        "class": "egret3d.Camera",
-        "extras": {}
-    }, {
-        "uuid": "33ea1932-7177-4209-93fc-f0b70d6dba95",
-        "class": "egret3d.Transform",
-        "children": [{
-            "uuid": "d6b92156-31e6-4a96-9e1f-f52f2a6a99a7"
-        }, {
-            "uuid": "7e43594a-939d-4a72-abdf-b218a919f259"
-        }],
-        "extras": {
-            "linkedID": "760bcc92-5bd8-4849-aaba-5b65d6f1581e"
+        {
+            "uuid": "b0ae5b08-fc5c-400a-87fa-b606cf258a21",
+            "class": "egret3d.Camera",
+            "extras": {}
         }
-    }, {
-        "uuid": "d6b92156-31e6-4a96-9e1f-f52f2a6a99a7",
-        "class": "egret3d.Transform",
-        "extras": {
-            "linkedID": "da08081d-6d52-466b-a59d-b0852b0a9c7b"
-        }
-    }, {
-        "uuid": "681615c8-4e53-441b-8c18-7c9b5edc4cd1",
-        "class": "egret3d.DirectionalLight",
-        "extras": {
-            "linkedID": "0ce2ce3c-d025-4b20-946e-486431c27568"
-        }
-    }, {
-        "uuid": "7e43594a-939d-4a72-abdf-b218a919f259",
-        "class": "egret3d.Transform",
-        "extras": {
-            "linkedID": "e900b547-f1c3-42c8-b274-40638827efb0"
-        }
-    }, {
-        "uuid": "906870c9-014b-4391-884f-e6ba638e8a8e",
-        "class": "egret3d.PointLight",
-        "extras": {
-            "linkedID": "8dcc9a1d-975f-4e1d-9777-6ea1b76016a0"
-        }
-    }]
+    ]
 }

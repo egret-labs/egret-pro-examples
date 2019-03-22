@@ -1,0 +1,44 @@
+{
+    "version": "4",
+    "asset": {
+        "version": "2.0"
+    },
+    "extensions": {},
+    "extensionsRequired": [
+        "paper"
+    ],
+    "extensionsUsed": [
+        "paper"
+    ],
+    "images": [
+        {
+            "uri": [
+                "Threejs/textures/cube/MilkyWay/dark-s_px.jpg",
+                "Threejs/textures/cube/MilkyWay/dark-s_nx.jpg",
+                "Threejs/textures/cube/MilkyWay/dark-s_py.jpg",
+                "Threejs/textures/cube/MilkyWay/dark-s_ny.jpg",
+                "Threejs/textures/cube/MilkyWay/dark-s_pz.jpg",
+                "Threejs/textures/cube/MilkyWay/dark-s_nz.jpg"
+            ]
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0,
+            "extensions": {
+                "paper": {
+                    "width": 1024,
+                    "height": 1024,
+                    "format": 6407,
+                    "faces": 6,
+                    "levels": 0,
+                    "mapping": 1
+                }
+            }
+        }
+    ]
+}

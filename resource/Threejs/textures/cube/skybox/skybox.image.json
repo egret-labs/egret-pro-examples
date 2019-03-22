@@ -1,0 +1,44 @@
+{
+    "version": "4",
+    "asset": {
+        "version": "2.0"
+    },
+    "extensions": {},
+    "extensionsRequired": [
+        "paper"
+    ],
+    "extensionsUsed": [
+        "paper"
+    ],
+    "images": [
+        {
+            "uri": [
+                "Threejs/textures/cube/skybox/px.jpg",
+                "Threejs/textures/cube/skybox/nx.jpg",
+                "Threejs/textures/cube/skybox/py.jpg",
+                "Threejs/textures/cube/skybox/ny.jpg",
+                "Threejs/textures/cube/skybox/pz.jpg",
+                "Threejs/textures/cube/skybox/nz.jpg"
+            ]
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0,
+            "extensions": {
+                "paper": {
+                    "width": 1024,
+                    "height": 1024,
+                    "format": 6407,
+                    "faces": 6,
+                    "levels": 0,
+                    "mapping": 1
+                }
+            }
+        }
+    ]
+}

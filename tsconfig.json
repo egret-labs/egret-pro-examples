@@ -1,20 +1,23 @@
 {
 	"compilerOptions": {
 		"skipLibCheck": true,
-		"target": "es5",
-		"outDir": "bin-debug",
-		"sourceMap": false,
 		"experimentalDecorators": true,
+		"strict": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+        "strictPropertyInitialization": false,
+		"stripInternal": true,
+        "preserveConstEnums": true,
+		"sourceMap": false,
+		"target": "es5",
 		"lib": [
 			"es5",
 			"dom",
 			"es2015.promise"
-		],
-		"types": []
+		]
 	},
 	"include": [
 		"src",
-		"libs",
-		"egret3d"
+		"libs"
 	]
 }

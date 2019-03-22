@@ -362,24 +362,29 @@
 			"name": "Assets/prefabs/texiao_anhei13x13.prefab.json"
 		},
 		{
-			"url": "Assets/scenes/eui_test.scene.json",
+			"url": "Assets/scenes/materials/CubeMap.scene.json",
 			"type": "Scene",
-			"name": "Assets/scenes/eui_test.scene.json"
-		},
-		{
-			"url": "Assets/scenes/input_test.scene.json",
-			"type": "Scene",
-			"name": "Assets/scenes/input_test.scene.json"
-		},
-		{
-			"url": "Assets/scenes/materials_examples/CubeMap.scene.json",
-			"type": "Scene",
-			"name": "Assets/scenes/materials_examples/CubeMap.scene.json"
+			"name": "Assets/scenes/materials/CubeMap.scene.json"
 		},
 		{
 			"url": "Assets/scenes/newScene.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/newScene.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/basic.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/basic.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/colliders.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/colliders.scene.json"
+		},
+		{
+			"url": "Assets/scenes/oimo/joints.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/oimo/joints.scene.json"
 		},
 		{
 			"url": "Assets/scenes/particle_test.scene.json",
@@ -390,6 +395,21 @@
 			"url": "Assets/scenes/prefab_test.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/prefab_test.scene.json"
+		},
+		{
+			"url": "Assets/scenes/tests/collider_raycast.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/tests/collider_raycast.scene.json"
+		},
+		{
+			"url": "Assets/scenes/tests/eui.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/tests/eui.scene.json"
+		},
+		{
+			"url": "Assets/scenes/tests/input.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/tests/input.scene.json"
 		},
 		{
 			"url": "Assets/textures/effect_huojiantong_hm_001.image.json",
@@ -617,9 +637,419 @@
 			"name": "Assets/textures/xiangshangguangshu01.png"
 		},
 		{
-			"url": "Threejs/materials/SwedishRoyalCastle.mat.json",
+			"url": "Threejs/materials/cube/Bridge2.mat.json",
 			"type": "Material",
-			"name": "Threejs/materials/SwedishRoyalCastle.mat.json"
+			"name": "Threejs/materials/cube/Bridge2.mat.json"
+		},
+		{
+			"url": "Threejs/materials/cube/MilkyWay.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/cube/MilkyWay.mat.json"
+		},
+		{
+			"url": "Threejs/materials/cube/pisa.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/cube/pisa.mat.json"
+		},
+		{
+			"url": "Threejs/materials/cube/skybox.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/cube/skybox.mat.json"
+		},
+		{
+			"url": "Threejs/materials/cube/skyboxsun25deg.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/cube/skyboxsun25deg.mat.json"
+		},
+		{
+			"url": "Threejs/materials/cube/SwedishRoyalCastle.mat.json",
+			"type": "Material",
+			"name": "Threejs/materials/cube/SwedishRoyalCastle.mat.json"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/Bridge2.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/Bridge2/Bridge2.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/negx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/negx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/negy.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/negy.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/negz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/negz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/posx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/posx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/posy.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/posy.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/posz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Bridge2/posz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Bridge2/readme.txt",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/Bridge2/readme.txt"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_nx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_nx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_ny.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_ny.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_nz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_nz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_px.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_px.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_py.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_py.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/dark-s_pz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/MilkyWay/dark-s_pz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/MilkyWay/MilkyWay.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/MilkyWay/MilkyWay.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/negx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/negx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/negy.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/negy.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/negz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/negz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/posx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/posx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/posy.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/posy.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/posz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park2/posz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park2/readme.txt",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/Park2/readme.txt"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/nx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/nx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/ny.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/ny.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/nz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/nz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/px.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/px.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/py.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/py.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/pz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/Park3Med/pz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/Park3Med/readme.txt",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/Park3Med/readme.txt"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/nx.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/nx.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/nx.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/nx.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/ny.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/ny.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/ny.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/ny.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/nz.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/nz.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/nz.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/nz.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/pisa.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/pisa.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/px.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/px.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/px.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/px.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/py.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/py.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/py.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/py.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/pz.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisa/pz.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisa/pz.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisa/pz.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/nx.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/nx.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/ny.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/ny.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/nz.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/nz.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/px.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/px.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/py.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/py.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaHDR/pz.hdr",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/pisaHDR/pz.hdr"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/nx.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/nx.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/nx.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/nx.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/ny.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/ny.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/ny.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/ny.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/nz.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/nz.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/nz.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/nz.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/px.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/px.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/px.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/px.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/py.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/py.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/py.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/py.png"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/pz.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/pisaRGBM16/pz.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/pisaRGBM16/pz.png",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/pisaRGBM16/pz.png"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/nx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/nx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/ny.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/ny.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/nz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/nz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/px.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/px.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/py.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/py.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/pz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skybox/pz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skybox/skybox.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/skybox/skybox.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/nx.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/nx.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/ny.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/ny.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/nz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/nz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/px.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/px.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/py.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/py.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/pz.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/skyboxsun25deg/pz.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/skyboxsun25deg.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/cube/skyboxsun25deg/skyboxsun25deg.image.json"
+		},
+		{
+			"url": "Threejs/textures/cube/skyboxsun25deg/skyboxsun25degtest.txt",
+			"type": "Unknown",
+			"name": "Threejs/textures/cube/skyboxsun25deg/skyboxsun25degtest.txt"
+		},
+		{
+			"url": "Threejs/textures/cube/sun_temple_stripe_stereo.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/sun_temple_stripe_stereo.jpg"
+		},
+		{
+			"url": "Threejs/textures/cube/sun_temple_stripe.jpg",
+			"type": "Texture",
+			"name": "Threejs/textures/cube/sun_temple_stripe.jpg"
 		},
 		{
 			"url": "Threejs/textures/cube/SwedishRoyalCastle/nx.jpg",

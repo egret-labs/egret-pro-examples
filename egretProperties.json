@@ -33,11 +33,15 @@
 		},
 		{
 			"name": "egret3d",
-			"path": "./egret3d"
+			"path": "./libs/egret3d"
 		},
 		{
 			"name": "inspector",
-			"path": "./inspector"
+			"path": "./libs/inspector"
+		},
+		{
+			"name": "oimo",
+			"path": "./oimo/oimo"
 		},
 		{
 			"name": "promise"

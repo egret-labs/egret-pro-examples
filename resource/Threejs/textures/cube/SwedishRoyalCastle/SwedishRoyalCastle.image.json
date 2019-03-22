@@ -31,8 +31,8 @@
             "source": 0,
             "extensions": {
                 "paper": {
-                    "width": 256,
-                    "height": 256,
+                    "width": 512,
+                    "height": 512,
                     "format": 6407,
                     "faces": 6,
                     "levels": 0,
