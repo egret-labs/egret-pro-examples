@@ -6,7 +6,7 @@
     ],
     "objects": [
         {
-            "uuid": 4384,
+            "uuid": "4384",
             "class": "paper.Scene",
             "name": "newScene.scene.json",
             "extras": {},
