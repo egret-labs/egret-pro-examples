@@ -5105,6 +5105,11 @@ declare namespace paper {
      * 基础系统。
      * - 全部系统的基类。
      * - 生命周期的顺序如下：
+     * - Name | Data Type | Size (Bytes)
+     * - :---:|:---------:|:-----------:
+     * - Tag | Uint32 | 4
+     * - Version | Uint32 | 4
+     * - |  |
      * - onAwake();
      * - onEnable();
      * - onStart();
@@ -8368,13 +8373,13 @@ declare namespace egret3d {
          * @param stagePosition 舞台坐标。
          * @param worldPosition 世界坐标。
          */
-        stageToWorld(stagePosition: Readonly<IVector3>, worldPosition?: Vector3): Vector3;
+        stageToWorld(stagePosition: Readonly<IVector3>, worldPosition?: Vector3 | null): Vector3;
         /**
          * 将舞台坐标基于该相机的视角转换为世界坐标。
          * @param worldPosition 世界坐标。
          * @param stagePosition 舞台坐标。
          */
-        worldToStage(worldPosition: Readonly<IVector3>, stagePosition?: Vector3): Vector3;
+        worldToStage(worldPosition: Readonly<IVector3>, stagePosition?: Vector3 | null): Vector3;
         /**
          * 将舞台坐标基于该相机的视角转换为世界射线。
          * @param stageX 舞台水平坐标。
@@ -8399,24 +8404,32 @@ declare namespace egret3d {
          */
         swapPostprocessingRenderTarget(): this;
         /**
-         * 控制该相机从正交到透视的过渡的系数，0：正交，1：透视，中间值则在两种状态间插值。
+         * 控制该相机从正交到透视的过渡的系数。
+         * - [`0.0` ~ `1.0`]
+         * - `0.0`：正交。
+         * - `1.0`：透视。
+         * - 中间值则在两种状态间插值。
          */
         opvalue: float;
         /**
-         * 该相机的视点到近裁剪面距离。
+         * 该相机视点到近裁剪面的距离。
+         * - 单位为`米`。
          * - 该值过小会引起深度冲突。
          */
         near: float;
         /**
          * 该相机的视点到远裁剪面距离。
+         * - 单位为`米`。
          */
         far: float;
         /**
-         * 透视投影的视野。
+         * 该相机透视投影的视野。
+         * - 弧度制。
          */
         fov: float;
         /**
-         * 该相机的正交投影的尺寸。
+         * 该相机正交投影的尺寸。
+         * - 单位为`米`。
          */
         size: float;
         /**
@@ -8425,6 +8438,7 @@ declare namespace egret3d {
         readonly aspect: float;
         /**
          * 该相机渲染目标的尺寸。
+         * - 单位为`米`。
          */
         readonly renderTargetSize: Readonly<ISize>;
         /**
@@ -8433,6 +8447,7 @@ declare namespace egret3d {
         viewport: Readonly<Rectangle>;
         /**
          * 该相机像素化的渲染视口。
+         * - 单位为`像素`。
          */
         pixelViewport: Readonly<IRectangle>;
         /**
