@@ -322,6 +322,11 @@
 			"name": "Assets/materials/moto/lowpoly_bag_ve_motorcycle_bag_BaseColor.mat.json"
 		},
 		{
+			"url": "Assets/materials/trail.mat.json",
+			"type": "Material",
+			"name": "Assets/materials/trail.mat.json"
+		},
+		{
 			"url": "Assets/materials/xiangshangguangshu02.mat.json",
 			"type": "Material",
 			"name": "Assets/materials/xiangshangguangshu02.mat.json"
@@ -410,6 +415,11 @@
 			"url": "Assets/scenes/tests/input.scene.json",
 			"type": "Scene",
 			"name": "Assets/scenes/tests/input.scene.json"
+		},
+		{
+			"url": "Assets/scenes/trail.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/trail.scene.json"
 		},
 		{
 			"url": "Assets/textures/effect_huojiantong_hm_001.image.json",
@@ -1090,6 +1100,16 @@
 			"url": "Threejs/textures/cube/SwedishRoyalCastle/SwedishRoyalCastle.image.json",
 			"type": "TextureDesc",
 			"name": "Threejs/textures/cube/SwedishRoyalCastle/SwedishRoyalCastle.image.json"
+		},
+		{
+			"url": "Threejs/textures/sprite.image.json",
+			"type": "TextureDesc",
+			"name": "Threejs/textures/sprite.image.json"
+		},
+		{
+			"url": "Threejs/textures/sprite.png",
+			"type": "Texture",
+			"name": "Threejs/textures/sprite.png"
 		},
 		{
 			"url": "Threejs/textures/UV_Grid_Sm.jpg",

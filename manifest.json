@@ -8,6 +8,7 @@
 		"libs/egret3d/egret3d.js",
 		"libs/inspector/inspector.js",
 		"libs/oimo/oimo.js",
+		"libs/trail/trail.js",
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
