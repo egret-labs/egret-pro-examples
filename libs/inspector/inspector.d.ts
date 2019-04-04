@@ -165,6 +165,9 @@ declare namespace paper.editor {
 }
 declare namespace paper.editor {
 }
+declare var VConsole: {
+    new (): any;
+} | null;
 declare namespace paper.editor {
     const context: EventDispatcher;
     enum selectItemType {
@@ -403,10 +406,10 @@ declare namespace paper.editor {
     /**
      *
      */
-    class InspectorComponent extends Component {
+    class GUIComponent extends Component {
         showStates: ShowState;
         readonly hierarchy: dat.GUI;
-        readonly property: dat.GUI;
+        readonly inspector: dat.GUI;
         readonly stats: Stats;
         readonly renderPanel: Stats.Panel;
         readonly drawCallPanel: Stats.Panel;
@@ -442,8 +445,6 @@ declare namespace paper.editor {
         openComponents(...args: IComponentClass<IComponent>[]): void;
         changeProperty(propName: string, propOldValue: any, propNewValue: any, target: BaseComponent): void;
     }
-}
-declare namespace paper.editor {
 }
 declare namespace paper.editor {
 }
@@ -496,6 +497,8 @@ declare namespace SPECTOR {
         spyCanvas(canvas: HTMLCanvasElement): void;
     }
 }
+declare namespace paper.editor {
+}
 declare namespace paper {
     /**
      * 默认标识和自定义标识。
@@ -525,11 +528,6 @@ declare namespace egret3d {
     const enum UniformSemantics {
     }
 }
-declare namespace paper.editor {
-}
-declare var VConsole: {
-    new (): any;
-} | null;
 declare namespace paper.editor {
 }
 declare namespace paper.editor {
