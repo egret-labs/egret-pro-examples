@@ -2,9 +2,6 @@
 export default class CubeMapStarter extends paper.Behaviour {
 
     public onStart() {
-        // TODO
-        paper.Scene.activeScene.ambientColor.fromHex(0xFFFFFF);
-
         const middle = paper.Application.sceneManager.activeScene.find<paper.GameObject>("Middle")!;
         middle.getComponentInChildren(egret3d.MeshRenderer)!.material = egret3d.Material.create(egret3d.DefaultShaders.MESH_LAMBERT)
             .setColor(0xFFFFFF);

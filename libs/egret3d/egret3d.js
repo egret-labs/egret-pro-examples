@@ -27464,8 +27464,7 @@ var egret3d;
                 var define = linked_1[_c];
                 var context = define.context;
                 if (context) {
-                    // if (typeof context === "number") {
-                    if (!define.isCode) {
+                    if (!define.isCode && typeof context === "number") {
                         context = define.name + " " + context;
                     }
                 }
