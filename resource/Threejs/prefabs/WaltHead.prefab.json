@@ -1,0 +1,76 @@
+{
+    "version": "5",
+    "assets": [
+        "builtin/meshlambert.mat.json",
+        "Threejs/models/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin"
+    ],
+    "objects": [
+        {
+            "uuid": "1",
+            "class": "paper.GameObject",
+            "name": "WaltHead",
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "2"
+                }
+            ]
+        },
+        {
+            "uuid": "3",
+            "class": "paper.GameObject",
+            "name": "Mesh_Mesh_head_geo.001_lambert2SG.001",
+            "_enabled": true,
+            "components": [
+                {
+                    "uuid": "6"
+                },
+                {
+                    "uuid": "4"
+                },
+                {
+                    "uuid": "5"
+                }
+            ]
+        }
+    ],
+    "components": [
+        {
+            "uuid": "2",
+            "class": "egret3d.Transform",
+            "children": [
+                {
+                    "uuid": "4"
+                }
+            ]
+        },
+        {
+            "uuid": "6",
+            "class": "egret3d.MeshRenderer",
+            "_lightmapScaleOffset": [
+                1,
+                1,
+                0,
+                0
+            ],
+            "_receiveShadows": true,
+            "_castShadows": true,
+            "materials": [
+                {
+                    "asset": 0
+                }
+            ]
+        },
+        {
+            "uuid": "4",
+            "class": "egret3d.Transform"
+        },
+        {
+            "uuid": "5",
+            "class": "egret3d.MeshFilter",
+            "mesh": {
+                "asset": 1
+            }
+        }
+    ]
+}

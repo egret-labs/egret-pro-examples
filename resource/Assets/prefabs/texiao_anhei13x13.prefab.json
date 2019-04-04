@@ -5,8 +5,6 @@
 		"Assets/materials/effect_huojiantong_hm_001.mat.json",
 		"Assets/materials/light0066.mat.json",
 		"Assets/materials/light0067.mat.json",
-		"Assets/animation/xuanzhuan_2_xuanzhuan_2.ani.bin",
-		"Assets/animation/xuanzhuan_1_xuanzhuan_1.ani.bin",
 		"Assets/textures/gui_3.mat.json"
 	],
 	"objects": [
@@ -179,9 +177,6 @@
 			"components": [
 				{
 					"uuid": "34"
-				},
-				{
-					"uuid": "35"
 				}
 			]
 		},
@@ -2099,19 +2094,6 @@
 			"children": []
 		},
 		{
-			"uuid": "35",
-			"class": "40",
-			"autoPlay": true,
-			"_animations": [
-				{
-					"asset": 5
-				},
-				{
-					"asset": 6
-				}
-			]
-		},
-		{
 			"uuid": "37",
 			"class": "11",
 			"localPosition": [
@@ -3787,7 +3769,7 @@
 			"_renderMode": 2,
 			"_materials": [
 				{
-					"asset": 7
+					"asset": 5
 				}
 			]
 		},

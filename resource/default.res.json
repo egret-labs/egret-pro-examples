@@ -247,6 +247,56 @@
 			"name": "Assets/animation/xuanzhuan_2_xuanzhuan_2.ani.bin"
 		},
 		{
+			"url": "Assets/animations/Mixamo/Head_Hit.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Head_Hit.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Hip_Hop_Dancing_1.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Hip_Hop_Dancing_1.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Hip_Hop_Dancing.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Hip_Hop_Dancing.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Idle_1.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Idle_1.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Idle.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Idle.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Looking_Around.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Looking_Around.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Running.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Running.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Samba_Dancing_1.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Samba_Dancing_1.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Samba_Dancing.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Samba_Dancing.ani.bin"
+		},
+		{
+			"url": "Assets/animations/Mixamo/Walking.ani.bin",
+			"type": "Animation",
+			"name": "Assets/animations/Mixamo/Walking.ani.bin"
+		},
+		{
 			"url": "Assets/materials/daoguang01_5x10.mat.json",
 			"type": "Material",
 			"name": "Assets/materials/daoguang01_5x10.mat.json"
@@ -332,29 +382,109 @@
 			"name": "Assets/materials/xiangshangguangshu02.mat.json"
 		},
 		{
+			"url": "Assets/models/Mixamo/vanguard/albedo.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/models/Mixamo/vanguard/albedo.image.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/albedo.png",
+			"type": "Texture",
+			"name": "Assets/models/Mixamo/vanguard/albedo.png"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/normal.image.json",
+			"type": "TextureDesc",
+			"name": "Assets/models/Mixamo/vanguard/normal.image.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/normal.png",
+			"type": "Texture",
+			"name": "Assets/models/Mixamo/vanguard/normal.png"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/vanguard_Mesh.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/vanguard/vanguard_Mesh.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/vanguard_t_choonyung.fbx.Vanguard_VisorMat.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/vanguard/vanguard_t_choonyung.fbx.Vanguard_VisorMat.mat.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/vanguard_visor.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/vanguard/vanguard_visor.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/vanguard/vanguardBodyMat.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/vanguard/vanguardBodyMat.mat.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/xbot/Beta_Joints.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/xbot/Beta_Joints.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/xbot/Beta_Surface.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/xbot/Beta_Surface.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/xbot/xbot.fbx.asdf1_Beta_HighLimbsGeoSG2.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/xbot/xbot.fbx.asdf1_Beta_HighLimbsGeoSG2.mat.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/xbot/xbot.fbx.Beta_Joints_MAT.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/xbot/xbot.fbx.Beta_Joints_MAT.mat.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/ybot/Alpha_Joints.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/ybot/Alpha_Joints.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/ybot/Alpha_Surface.mesh.bin",
+			"type": "Mesh",
+			"name": "Assets/models/Mixamo/ybot/Alpha_Surface.mesh.bin"
+		},
+		{
+			"url": "Assets/models/Mixamo/ybot/ybot.fbx.Alpha_Body_MAT.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/ybot/ybot.fbx.Alpha_Body_MAT.mat.json"
+		},
+		{
+			"url": "Assets/models/Mixamo/ybot/ybot.fbx.Alpha_Joints_MAT.mat.json",
+			"type": "Material",
+			"name": "Assets/models/Mixamo/ybot/ybot.fbx.Alpha_Joints_MAT.mat.json"
+		},
+		{
 			"url": "Assets/models/Motorbike_03.mesh.bin",
 			"type": "Mesh",
 			"name": "Assets/models/Motorbike_03.mesh.bin"
 		},
 		{
-			"url": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin",
-			"type": "Mesh",
-			"name": "Assets/models/Threejs/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin"
-		},
-		{
-			"url": "Assets/models/Threejs/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json",
-			"type": "Material",
-			"name": "Assets/models/Threejs/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json"
-		},
-		{
-			"url": "Assets/models/Threejs/WaltHead.prefab.json",
-			"type": "Prefab",
-			"name": "Assets/models/Threejs/WaltHead.prefab.json"
-		},
-		{
 			"url": "Assets/prefabs/grid_room.prefab.json",
 			"type": "Prefab",
 			"name": "Assets/prefabs/grid_room.prefab.json"
+		},
+		{
+			"url": "Assets/prefabs/Mixamo/vanguard.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/Mixamo/vanguard.prefab.json"
+		},
+		{
+			"url": "Assets/prefabs/Mixamo/xbot.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/Mixamo/xbot.prefab.json"
+		},
+		{
+			"url": "Assets/prefabs/Mixamo/ybot.prefab.json",
+			"type": "Prefab",
+			"name": "Assets/prefabs/Mixamo/ybot.prefab.json"
 		},
 		{
 			"url": "Assets/prefabs/Motorcycle01.prefab.json",
@@ -365,6 +495,11 @@
 			"url": "Assets/prefabs/texiao_anhei13x13.prefab.json",
 			"type": "Prefab",
 			"name": "Assets/prefabs/texiao_anhei13x13.prefab.json"
+		},
+		{
+			"url": "Assets/scenes/animations/basic.scene.json",
+			"type": "Scene",
+			"name": "Assets/scenes/animations/basic.scene.json"
 		},
 		{
 			"url": "Assets/scenes/materials/CubeMap.scene.json",
@@ -675,6 +810,21 @@
 			"url": "Threejs/materials/cube/SwedishRoyalCastle.mat.json",
 			"type": "Material",
 			"name": "Threejs/materials/cube/SwedishRoyalCastle.mat.json"
+		},
+		{
+			"url": "Threejs/models/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin",
+			"type": "Mesh",
+			"name": "Threejs/models/walt/WaltHead_Mesh_Mesh_head_geo.001_lambert2SG.001.mesh.bin"
+		},
+		{
+			"url": "Threejs/models/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json",
+			"type": "Material",
+			"name": "Threejs/models/walt/WaltHead.obj.Mesh_Mesh_head_geo.001_lambert2SG.001Mat.mat.json"
+		},
+		{
+			"url": "Threejs/prefabs/WaltHead.prefab.json",
+			"type": "Prefab",
+			"name": "Threejs/prefabs/WaltHead.prefab.json"
 		},
 		{
 			"url": "Threejs/textures/cube/Bridge2/Bridge2.image.json",

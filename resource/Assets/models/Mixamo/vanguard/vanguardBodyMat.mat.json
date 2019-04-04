@@ -7,19 +7,16 @@
             "extensions": {
                 "KHR_techniques_webgl": {
                     "values": {
-                        "diffuse": [
-                            0.8,
-                            0.8,
-                            0.8
-                        ],
-                        "opacity": 1
+                        "metalness": 0,
+                        "map": "Assets/models/Mixamo/vanguard/albedo.image.json",
+                        "normalMap": "Assets/models/Mixamo/vanguard/normal.image.json"
                     },
-                    "technique": "builtin/materialcolor.shader.json"
+                    "technique": "builtin/meshphysical.shader.json"
                 },
                 "paper": {
                     "renderQueue": 2000,
                     "defines": [
-                        "ALPHATEST 0.5"
+                        "STANDARD"
                     ]
                 }
             }
